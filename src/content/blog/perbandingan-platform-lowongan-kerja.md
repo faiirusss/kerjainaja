@@ -133,6 +133,30 @@ Tidak wajib. Versi gratis sudah cukup untuk apply dan networking basic. Premium 
 
 Pilih platform yang sesuai dengan level karir dan target industrimu. Semakin banyak platform yang kamu manfaatkan, semakin besar peluang dapat kerja!
 
+## FAQ
+
+**Platform paling efektif untuk fresh graduate?**
+Glints dan JobStreet. LinkedIn juga bagus untuk mulai membangun personal branding sejak dini.
+
+**Apakah perlu berbayar untuk LinkedIn Premium?**
+Tidak wajib. Versi gratis sudah cukup untuk apply dan networking basic. Premium berguna kalau kamu ingin lihat insight kompetitor dan gaji.
+
+**Bagaimana cara menghindari lowongan palsu?**
+- Jangan transfer uang dalam bentuk apapun
+- Cek website resmi perusahaan
+- Google nama perusahaan + "scam" atau "penipuan"
+- Waspada lowongan dengan gaji terlalu tinggi tanpa syarat jelas
+
+**Di mana cari lowongan kerja internasional?**
+Upwork, Remote OK, We Work Remotely, LinkedIn (filter Remote/Worldwide), dan FlexJobs. Untuk fresh graduate, mulai dari entry-level remote di Glints atau LinkedIn dulu sebelum mencoba platform internasional.
+
+**LinkedIn vs JobStreet — mana yang lebih baik?**
+LinkedIn unggul di networking dan perusahaan multinasional. JobStreet unggul di jumlah lowongan lokal. Idealnya pakai keduanya — LinkedIn untuk personal branding, JobStreet untuk quantity apply.
+
+---
+
+Pilih platform yang sesuai dengan level karir dan target industrimu. Semakin banyak platform yang kamu manfaatkan, semakin besar peluang dapat kerja!
+
 **Baca juga:**
 - [Panduan Lengkap Membuat CV 2026](/blog/panduan-membuat-cv-2026) — bikin CV yang dilirik HRD
 - [Cara Sukses Interview Kerja Online](/blog/sukses-interview-kerja-online) — tips lolos wawancara
