@@ -176,54 +176,58 @@ const postSchema = {
 
   .post-content table {
     width: 100%;
+    max-width: 100%;
     border-collapse: separate;
     border-spacing: 0;
     margin: var(--space-2xl) 0;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 0 0 1px rgba(32, 21, 21, 0.08);
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
   .post-content th {
     background: var(--color-ink);
     color: var(--color-on-primary);
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    padding: var(--space-md) var(--space-lg);
+    padding: 10px 14px;
     text-align: left;
     white-space: nowrap;
   }
   .post-content td {
-    padding: var(--space-md) var(--space-lg);
+    padding: 10px 14px;
     border-bottom: 1px solid rgba(32, 21, 21, 0.06);
-    vertical-align: top;
+    vertical-align: middle;
   }
   .post-content tbody tr:last-child td {
     border-bottom: none;
   }
   .post-content tbody tr:nth-child(even) td {
-    background: rgba(248, 244, 240, 0.5);
+    background: rgba(248, 244, 240, 0.4);
   }
   .post-content tbody tr:hover td {
-    background: var(--color-canvas-soft);
+    background: rgba(255, 79, 0, 0.04);
+  }
+  @media (max-width: 640px) {
+    .post-content table { font-size: 12px; }
+    .post-content th,
+    .post-content td { padding: 8px 10px; }
   }
 
-  /* Wrap tables in scroll container on mobile */
-  .post-content .table-wrap {
+  /* Table wrap — applied by JS on all blog article tables */
+  .table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin: var(--space-2xl) 0;
+    border-radius: var(--radius-md);
   }
-  .post-content .table-wrap table {
+  .table-wrap table {
     margin: 0;
-    min-width: 500px;
+    min-width: 520px;
   }
 
   @media (max-width: 768px) {

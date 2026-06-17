@@ -37,5 +37,19 @@ const { title, description, schema, ogImage, ogType, canonical, noIndex } = Astr
       <slot />
     </main>
     <Footer />
+    <script>
+      // Wrap all tables inside .post-content in a scrollable container
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.post-content table').forEach(function (table) {
+          if (!table.parentElement.classList.contains('table-wrap')) {
+            var wrapper = document.createElement('div');
+            wrapper.className = 'table-wrap';
+            wrapper.style.cssText = 'overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0;';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
