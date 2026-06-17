@@ -5,6 +5,17 @@ pubDate: 2026-06-15
 author: "Redaksi KerjainAja"
 tags: ["platform lowongan kerja", "JobStreet", "LinkedIn", "Glints", "Indeed", "perbandingan"]
 image: "/og-image.png"
+faq:
+  - question: "Platform paling efektif untuk fresh graduate?"
+    answer: "Glints dan JobStreet. Glints punya banyak lowongan early career dan review perusahaan. LinkedIn juga bagus untuk mulai membangun personal branding sejak dini."
+  - question: "Apakah perlu berbayar untuk LinkedIn Premium?"
+    answer: "Tidak wajib. Versi gratis sudah cukup untuk apply dan networking basic. Premium berguna kalau kamu ingin lihat insight kompetitor dan gaji."
+  - question: "Bagaimana cara menghindari lowongan palsu?"
+    answer: "Jangan transfer uang dalam bentuk apapun, cek website resmi perusahaan, Google nama perusahaan + 'scam' atau 'penipuan', dan waspada lowongan dengan gaji terlalu tinggi tanpa syarat jelas."
+  - question: "Di mana cari lowongan kerja internasional?"
+    answer: "Upwork, Remote OK, We Work Remotely, LinkedIn (filter Remote/Worldwide), dan FlexJobs. Untuk fresh graduate, mulai dari entry-level remote di Glints atau LinkedIn dulu."
+  - question: "LinkedIn vs JobStreet — mana yang lebih baik?"
+    answer: "LinkedIn unggul di networking dan perusahaan multinasional. JobStreet unggul di jumlah lowongan lokal. Idealnya pakai keduanya."
 ---
 
 Mencari kerja online di Indonesia punya banyak pilihan platform. Tapi mana yang paling efektif? Jawabannya tergantung kebutuhan kamu.

@@ -5,6 +5,15 @@ pubDate: 2026-06-14
 author: "Redaksi KerjainAja"
 tags: ["interview", "tips karir", "persiapan wawancara", "online interview"]
 image: "/og-image.png"
+faq:
+  - question: "Apakah wajib pakai kamera saat interview online?"
+    answer: "Ya, hampir selalu. Interview online tetap mengharapkan kontak visual. Kecuali HR menyatakan boleh audio only, pastikan kamera menyala."
+  - question: "Bagaimana kalau internet tiba-tiba mati saat interview?"
+    answer: "Cepat switch ke hotspot HP, atau hubungi pewawancara via chat/telepon untuk jelaskan situasi. Siapkan backup internet sebelum interview."
+  - question: "Berapa lama ideal waktu menjawab pertanyaan interview?"
+    answer: "30-90 detik per jawaban. Jangan terlalu panjang atau terlalu pendek. Jawab langsung ke intinya, lalu beri contoh singkat."
+  - question: "Apakah boleh sambil lihat catatan saat interview online?"
+    answer: "Boleh, asal tidak terdengar seperti membaca dan kamu tetap fokus ke kamera. Siapkan catatan singkat di luar layar atau sticky notes."
 ---
 
 Interview online via video call (Zoom, Google Meet, Microsoft Teams) sudah menjadi standar baru dalam rekrutmen. Apalagi setelah pandemi, banyak perusahaan tetap mempertahankan format ini karena lebih efisien.

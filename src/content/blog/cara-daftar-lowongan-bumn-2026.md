@@ -5,6 +5,15 @@ pubDate: 2026-06-17
 author: "Redaksi KerjainAja"
 tags: ["BUMN", "lowongan BUMN", "CPNS", "SSCASN", "tips karir"]
 image: "/og-image.png"
+faq:
+  - question: "Apakah lulusan SMA bisa daftar BUMN?"
+    answer: "Bisa. Beberapa BUMN membuka lowongan untuk lulusan SMA/SMK untuk posisi tertentu seperti operator, teknisi, dan administrasi."
+  - question: "Berapa kali rekrutmen BUMN dalam setahun?"
+    answer: "Rekrutmen bersama FHCI biasanya sekali setahun, tapi beberapa BUMN juga melakukan rekrutmen mandiri di luar jadwal tersebut."
+  - question: "Apakah ada biaya pendaftaran BUMN?"
+    answer: "Tidak ada. Pendaftaran BUMN GRATIS. Jangan percaya jika ada yang meminta biaya untuk 'jalur khusus' atau 'koneksi dalam'."
+  - question: "Nilai TOEFL minimal berapa untuk daftar BUMN?"
+    answer: "Tergantung BUMN, biasanya minimal 450-500. Beberapa BUMN besar seperti Pertamina dan Bank Mandiri meminta minimal 500-550."
 ---
 
 Mencari lowongan BUMN (Badan Usaha Milik Negara) adalah impian banyak pencari kerja di Indonesia. Gaji kompetitif, jaminan pensiun, jenjang karir jelas — siapa yang tidak mau?

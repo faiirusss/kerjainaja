@@ -5,6 +5,15 @@ pubDate: 2026-06-17
 author: "Redaksi KerjainAja"
 tags: ["aplikasi cari kerja", "lowongan kerja", "platform gratis", "fresh graduate", "2026"]
 image: "/og-image.png"
+faq:
+  - question: "Apakah semua aplikasi cari kerja ini benar-benar gratis?"
+    answer: "Ya, semua platform di atas gratis untuk pencari kerja. Jangan pernah membayar untuk 'biaya pendaftaran' atau 'biaya administrasi' lowongan kerja."
+  - question: "Berapa banyak aplikasi yang harus saya pasang?"
+    answer: "Minimal 3: JobStreet untuk jumlah lowongan, LinkedIn untuk networking, dan Glints atau Dealls untuk early career."
+  - question: "Aplikasi paling cepat dapat kerja?"
+    answer: "LinkedIn — karena recruiter bisa menemukan kamu tanpa kamu melamar. Tapi ini tergantung profil dan industri kamu."
+  - question: "Apakah aplikasi luar negeri seperti Indeed cocok untuk Indonesia?"
+    answer: "Indeed Indonesia cukup populer dan banyak lowongan dalam bahasa Indonesia. Tapi untuk lowongan lokal spesifik, JobStreet dan Glints biasanya lebih lengkap."
 ---
 
 Mencari kerja di era digital tidak perlu mahal. Banyak aplikasi cari kerja gratis yang bisa membantu kamu mendapatkan pekerjaan impian tanpa biaya sepeser pun.

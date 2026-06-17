@@ -5,6 +5,17 @@ pubDate: 2026-06-17
 author: "Redaksi KerjainAja"
 tags: ["kerja remote", "fresh graduate", "WFH", "kerja dari rumah", "tips karir"]
 image: "/og-image.png"
+faq:
+  - question: "Apakah fresh graduate bisa kerja remote?"
+    answer: "Sangat bisa. Banyak perusahaan yang justru lebih suka fresh graduate karena lebih adaptif dengan tools baru dan tidak perlu unlearn kebiasaan kerja kantor."
+  - question: "Berapa jam kerja remote biasanya?"
+    answer: "Untuk full-time remote 8 jam per hari seperti kerja kantor. Tapi banyak perusahaan yang fleksibel, asalkan pekerjaan selesai tepat waktu."
+  - question: "Apakah kerja remote butuh pengalaman?"
+    answer: "Untuk entry-level biasanya tidak butuh pengalaman. Tapi skill dasar seperti komunikasi, manajemen waktu, dan tools remote harus sudah dikuasai."
+  - question: "Bagaimana cara menemukan lowongan remote yang legitimate?"
+    answer: "Gunakan platform terpercaya seperti JobStreet, LinkedIn, dan Glints. Waspada lowongan yang meminta bayaran atau data rekening."
+  - question: "Apa perbedaan remote dan freelance?"
+    answer: "Remote berarti kerja tetap untuk 1 perusahaan tapi dari rumah. Freelance berarti kerja proyek per proyek untuk banyak klien."
 ---
 
 Kerja remote (Work From Home / WFH) bukan lagi tren — ini sudah menjadi standar baru di dunia kerja. Apalagi untuk fresh graduate, peluang kerja remote membuka akses ke perusahaan lokal maupun internasional tanpa harus pindah kota.

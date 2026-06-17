@@ -39,27 +39,20 @@ const postSchema = {
         { "@type": "ListItem", "position": 3, "name": post.data.title, "item": `https://kerjainaja.vercel.app/blog/${post.id}` }
       ]
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Apa yang dibahas di artikel ini?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": post.data.description
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Apakah artikel ini gratis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ya, semua artikel di KerjainAja gratis dan bisa diakses oleh siapa saja tanpa biaya."
-          }
-        }
-      ]
-    }
+    ...((post.data.faq ?? []).length > 0
+      ? [{
+          "@type": "FAQPage",
+          "mainEntity": post.data.faq.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.answer
+            }
+          }))
+        }]
+      : []
+    )
   ]
 };
 ---

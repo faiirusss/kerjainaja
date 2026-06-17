@@ -5,6 +5,17 @@ pubDate: 2026-06-17
 author: "Redaksi KerjainAja"
 tags: ["tips karir", "fresh graduate", "tanpa koneksi", "ordal", "cari kerja"]
 image: "/og-image.svg"
+faq:
+  - question: "Apakah mungkin dapat kerja tanpa ordal?"
+    answer: "Sangat mungkin. Ribuan fresh graduate setiap tahun diterima kerja tanpa koneksi. Kuncinya ada di CV yang kuat, kegigihan apply, dan persiapan interview yang matang."
+  - question: "Berapa lama bisa dapat kerja tanpa koneksi?"
+    answer: "Rata-rata 2-4 bulan untuk fresh graduate. Yang rajin apply bisa dapat dalam 1-2 bulan. Yang konsisten memperbaiki CV dan skill bisa lebih cepat."
+  - question: "Apa yang harus dilakukan kalau sudah apply 100 lamaran tapi belum dipanggil?"
+    answer: "Evaluasi CV (mungkin perlu disesuaikan dengan job desc), perbarui LinkedIn, perbanyak portofolio, dan ikuti kursus singkat untuk ningkatin skill."
+  - question: "Apakah job fair benar-benar membantu?"
+    answer: "Ya. Banyak perusahaan membuka lowongan khusus di job fair dan tidak dipublikasikan di platform umum. Datang lebih awal dengan CV cetak minimal 10 lembar."
+  - question: "Haruskah saya menerima kerja di bawah standar gaji?"
+    answer: "Untuk pengalaman pertama, gaji bukan segalanya. Pengalaman 1-2 tahun akan membuatmu lebih mudah dapat kerja berikutnya dengan gaji lebih tinggi."
 ---
 
 Mitos bahwa "cari kerja harus pakai koneksi / orang dalam" masih kuat di Indonesia. Kenyataannya, **banyak perusahaan besar justru merekrut lewat jalur formal** — dan fresh graduate yang tidak punya koneksi tetap bisa lolos.

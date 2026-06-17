@@ -5,6 +5,15 @@ pubDate: 2026-06-16
 author: "Redaksi KerjainAja"
 tags: ["CV", "lamaran kerja", "tips karir", "fresh graduate"]
 image: "/og-image.png"
+faq:
+  - question: "Apakah CV harus pakai foto?"
+    answer: "Tidak wajib. Beberapa perusahaan meminta, sebagian besar tidak. Kalau diminta, pakai foto formal latar belakang polos. Untuk fresh graduate, lebih baik fokus ke konten CV daripada foto."
+  - question: "Fresh graduate belum punya pengalaman, bagaimana?"
+    answer: "Cantumkan magang, organisasi, kepanitiaan, volunteering, atau project akademik. Itu semua termasuk pengalaman yang dihargai HRD."
+  - question: "Berapa halaman ideal CV fresh graduate?"
+    answer: "1 halaman cukup. HRD membaca CV rata-rata 6-10 detik, jadi pastikan informasi penting ada di bagian atas."
+  - question: "Apakah perlu masukkan skill yang masih belajar?"
+    answer: "Tulis yang benar-benar kamu kuasai. Kalau masih belajar, tulis 'dasar' atau 'menengah' di samping skill tersebut agar tidak overpromise di interview."
 ---
 
 **Curriculum Vitae (CV)** adalah dokumen paling penting dalam proses melamar kerja. Ini adalah kesan pertama yang dilihat HRD sebelum memutuskan apakah kamu layak dipanggil interview.
