@@ -64,7 +64,7 @@ const landingSchema = {
 
 <Layout
   title="Panduan Lengkap Cari Kerja Online di Indonesia"
-  description="Panduan lengkap cari kerja online di Indonesia. Dapatkan tips CV, trik interview, dan rekomendasi platform lowongan kerja terpercaya. Mulai karirmu sekarang!"
+  description="Panduan lengkap cari kerja online di Indonesia. Dapatkan tips CV ATS-friendly, trik lolos interview, dan rekomendasi 10+ platform lowongan kerja terpercaya 2026. Mulai karirmu sekarang!"
   ogType="website"
   canonical={site}
   schema={landingSchema}
@@ -73,7 +73,7 @@ const landingSchema = {
   <section class="hero">
     <div class="hero-content">
       <span class="hero-badge">Panduan Karir #1 di Indonesia</span>
-      <h1>Temukan <span class="highlight">Pekerjaan Impian</span> dengan Cara yang Tepat</h1>
+      <h1>Panduan Lengkap <span class="highlight">Cari Kerja Online</span> di Indonesia</h1>
       <p class="hero-sub">
         Panduan lengkap cari kerja online — dari bikin CV, persiapan interview, 
         sampai daftar platform lowongan kerja terpercaya di Indonesia.
@@ -84,7 +84,7 @@ const landingSchema = {
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <strong>50+</strong>
+          <strong>3+</strong>
           <span>Artikel Panduan</span>
         </div>
         <div class="stat">
@@ -104,19 +104,25 @@ const landingSchema = {
     <h2>Apa yang Kami Sediakan</h2>
     <div class="features-grid">
       <article class="feature-card">
-        <div class="feature-icon">📝</div>
-        <h3>Panduan CV & Lamaran</h3>
-        <p>Tips bikin CV yang dilirik HRD, contoh surat lamaran, dan strategi personal branding.</p>
+        <a href="/blog/panduan-membuat-cv-2026" class="feature-card-link">
+          <div class="feature-icon">📝</div>
+          <h3>Panduan CV & Lamaran</h3>
+          <p>Tips bikin CV yang dilirik HRD, contoh surat lamaran, dan strategi personal branding.</p>
+        </a>
       </article>
       <article class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <h3>Persiapan Interview</h3>
-        <p>Pertanyaan yang sering muncul, cara menjawab, dan simulasi interview online.</p>
+        <a href="/blog/sukses-interview-kerja-online" class="feature-card-link">
+          <div class="feature-icon">🎯</div>
+          <h3>Persiapan Interview</h3>
+          <p>Pertanyaan yang sering muncul, cara menjawab, dan simulasi interview online.</p>
+        </a>
       </article>
       <article class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <h3>Review Platform</h3>
-        <p>Perbandingan JobStreet, LinkedIn, Glints, Indeed, Karirhub dan lainnya.</p>
+        <a href="/blog/perbandingan-platform-lowongan-kerja" class="feature-card-link">
+          <div class="feature-icon">🔍</div>
+          <h3>Review Platform</h3>
+          <p>Perbandingan JobStreet, LinkedIn, Glints, Indeed, Karirhub dan lainnya.</p>
+        </a>
       </article>
       <article class="feature-card">
         <div class="feature-icon">💼</div>
@@ -254,6 +260,14 @@ const landingSchema = {
     border-radius: 12px;
     border: 1px solid #e5e7eb;
     transition: box-shadow 0.2s;
+  }
+  .feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .feature-card-link:hover {
+    text-decoration: none;
   }
   .feature-card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);

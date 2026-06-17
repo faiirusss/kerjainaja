@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kerjainaja.vercel.app/sitemap-index.xml

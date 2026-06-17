@@ -132,3 +132,7 @@ Tidak wajib. Versi gratis sudah cukup untuk apply dan networking basic. Premium 
 ---
 
 Pilih platform yang sesuai dengan level karir dan target industrimu. Semakin banyak platform yang kamu manfaatkan, semakin besar peluang dapat kerja!
+
+**Baca juga:**
+- [Panduan Lengkap Membuat CV 2026](/blog/panduan-membuat-cv-2026) — bikin CV yang dilirik HRD
+- [Cara Sukses Interview Kerja Online](/blog/sukses-interview-kerja-online) — tips lolos wawancara

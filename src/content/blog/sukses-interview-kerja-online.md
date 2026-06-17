@@ -128,3 +128,7 @@ Boleh, asal tidak terdengar seperti membaca dan kamu tetap fokus ke kamera.
 ---
 
 Dengan persiapan yang matang, interview online bisa menjadi keunggulan kompetitif kamu. Selamat mencoba!
+
+**Baca juga:**
+- [Panduan Lengkap Membuat CV 2026](/blog/panduan-membuat-cv-2026) — langkah pertama sebelum interview
+- [Perbandingan Platform Lowongan Kerja](/blog/perbandingan-platform-lowongan-kerja) — cari lowongan yang tepat

@@ -113,3 +113,7 @@ Tulis yang benar-benar kamu kuasai. Kalau masih belajar, tulis "dasar" atau "men
 ---
 
 Dengan CV yang rapi, terstruktur, dan sesuai target, peluang kamu dipanggil interview naik signifikan. Semoga membantu dan selamat mencoba!
+
+**Baca juga:**
+- [Cara Sukses Interview Kerja Online](/blog/sukses-interview-kerja-online) — persiapan setelah CV lolos
+- [Perbandingan Platform Lowongan Kerja](/blog/perbandingan-platform-lowongan-kerja) — cari tahu tempat apply terbaik
