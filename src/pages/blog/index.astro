@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout
+  title="Blog — Panduan & Tips Cari Kerja"
+  description="Kumpulan artikel panduan cari kerja online di Indonesia. Tips CV, persiapan interview, review platform lowongan kerja, dan info karir terbaru."
+  ogType="blog"
+>
+  <section class="blog-header">
+    <h1>📚 Semua Panduan & Tips</h1>
+    <p>Dapatkan tips terbaru seputar cara melamar kerja, bikin CV, persiapan interview, dan review platform lowongan kerja di Indonesia.</p>
+  </section>
+
+  <section class="blog-list">
+    {posts.length > 0 ? (
+      posts.map(post => (
+        <article class="blog-card">
+          <a href={`/blog/${post.id}`} class="blog-card-link">
+            <div class="blog-meta">
+              <time datetime={post.data.pubDate.toISOString()}>
+                {new Intl.DateTimeFormat('id-ID', { dateStyle: 'long' }).format(post.data.pubDate)}
+              </time>
+              {post.data.tags.length > 0 && (
+                <div class="blog-tags">
+                  {post.data.tags.map(tag => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <h2>{post.data.title}</h2>
+            <p class="blog-excerpt">{post.data.description}</p>
+            <span class="read-more">Baca selengkapnya →</span>
+          </a>
+        </article>
+      ))
+    ) : (
+      <div class="empty-state">
+        <p>Belum ada artikel. Pantau terus!</p>
+      </div>
+    )}
+  </section>
+</Layout>
+
+<style>
+  .blog-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+  }
+  .blog-header h1 {
+    margin-bottom: 0.75rem;
+  }
+  .blog-header p {
+    color: #6b7280;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .blog-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: box-shadow 0.2s;
+  }
+  .blog-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .blog-card-link {
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .blog-card-link:hover {
+    text-decoration: none;
+  }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  .blog-tags {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: #f3f4f6;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  .blog-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #111827;
+  }
+  .blog-card:hover h2 {
+    color: #2563eb;
+  }
+  .blog-excerpt {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .read-more {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+  }
+</style>

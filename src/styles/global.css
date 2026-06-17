@@ -1,0 +1,88 @@
+/* Global Styles — KerjainAja */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+  color: #111827;
+}
+
+h1 { font-size: 2.5rem; font-weight: 800; }
+h2 { font-size: 1.75rem; font-weight: 700; margin-top: 2rem; }
+h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; }
+
+p { margin-bottom: 1rem; }
+
+ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+li { margin-bottom: 0.25rem; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.35rem; }
+  .main { padding: 2rem 1rem; }
+}

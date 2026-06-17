@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://kerjainaja.vercel.app/tentang#aboutpage",
+      "url": "https://kerjainaja.vercel.app/tentang",
+      "name": "Tentang KerjainAja"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://kerjainaja.vercel.app/tentang#webpage",
+      "url": "https://kerjainaja.vercel.app/tentang",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://kerjainaja.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Tentang", "item": "https://kerjainaja.vercel.app/tentang" }
+        ]
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Tentang Kami"
+  description="KerjainAja adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan pencari kerja menemukan karir impian."
+  schema={aboutSchema}
+>
+  <section class="about">
+    <h1>Tentang KerjainAja</h1>
+    
+    <div class="about-content">
+      <p><strong>KerjainAja</strong> adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan siapapun yang sedang mencari pekerjaan agar bisa mendapatkan karir impian dengan cara yang tepat.</p>
+
+      <h2>Mengapa KerjainAja?</h2>
+      <p>Mencari kerja di era digital seharusnya lebih mudah, tapi kenyataannya banyak pencari kerja yang bingung:</p>
+      <ul>
+        <li>Platform lowongan mana yang terpercaya?</li>
+        <li>Bagaimana cara bikin CV yang dilirik HRD?</li>
+        <li>Persiapan interview yang tepat seperti apa?</li>
+        <li>Bagaimana cara menghindari lowongan palsu?</li>
+      </ul>
+      <p>KerjainAja hadir untuk menjawab semua pertanyaan itu dengan panduan yang praktis, terpercaya, dan selalu diperbarui.</p>
+
+      <h2>Apa yang Kami Tawarkan</h2>
+      <ul>
+        <li><strong>Panduan CV & Lamaran</strong> — template dan tips dari profesional HR</li>
+        <li><strong>Review Platform Lowongan</strong> — perbandingan JobStreet, LinkedIn, Glints, Indeed, dan lainnya</li>
+        <li><strong>Persiapan Interview</strong> — soal yang sering muncul dan cara menjawabnya</li>
+        <li><strong>Tips Karir Remote</strong> — panduan kerja dari rumah untuk pasar global</li>
+        <li><strong>Info Tren Karir</strong> — industri dan skill yang paling dicari di Indonesia</li>
+      </ul>
+
+      <h2>Visi Kami</h2>
+      <p>Menjadi referensi utama pencari kerja Indonesia dalam membuat keputusan karir yang tepat — dengan informasi yang akurat, praktis, dan gratis.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about h1 {
+    margin-bottom: 1.5rem;
+  }
+  .about-content {
+    max-width: 750px;
+  }
+  .about-content p {
+    font-size: 1.05rem;
+    color: #374151;
+  }
+  .about-content ul {
+    margin-bottom: 1.5rem;
+  }
+  .about-content li {
+    margin-bottom: 0.5rem;
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+// Header — navigasi utama
+const path = Astro.url.pathname;
+const nav = [
+  { href: '/', label: 'Beranda' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/tentang', label: 'Tentang' },
+  { href: '/kontak', label: 'Kontak' },
+];
+---
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/" class="logo">Kerjain<span>Aja</span></a>
+    <nav class="nav" aria-label="Navigasi utama">
+      {nav.map(item => (
+        <a href={item.href} class={`nav-link${path === item.href ? ' active' : ''}`}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #111827;
+  }
+  .logo span {
+    color: #2563eb;
+  }
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: #2563eb;
+  }
+</style>

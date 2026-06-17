@@ -1,0 +1,40 @@
+---
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  schema?: Record<string, any>;
+  ogImage?: string;
+  ogType?: string;
+  canonical?: string;
+  noIndex?: boolean;
+}
+
+const { title, description, schema, ogImage, ogType, canonical, noIndex } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      schema={schema}
+      ogImage={ogImage}
+      ogType={ogType}
+      canonical={canonical}
+      noIndex={noIndex}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="main container">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

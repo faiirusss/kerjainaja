@@ -1,0 +1,74 @@
+---
+// SEO Component — meta tags, Open Graph, Twitter Card, JSON-LD Structured Data
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  schema?: Record<string, any>;
+  noIndex?: boolean;
+}
+
+const { title, description, canonical, ogImage, ogType, schema, noIndex } = Astro.props;
+const site = 'https://kerjainaja.vercel.app';
+const pageUrl = canonical || Astro.url.pathname;
+const fullUrl = pageUrl.startsWith('http') ? pageUrl : `${site}${pageUrl}`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{title} | KerjainAja</title>
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href={fullUrl} />
+{noIndex && <meta name="robots" content="noindex" />}
+
+<!-- Open Graph -->
+<meta property="og:title" content={`${title} | KerjainAja`} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={fullUrl} />
+<meta property="og:type" content={ogType || 'website'} />
+<meta property="og:site_name" content="KerjainAja" />
+<meta property="og:locale" content="id_ID" />
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={`${title} | KerjainAja`} />
+<meta name="twitter:description" content={description} />
+
+<!-- Structured Data - Organization + WebSite -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${site}/#organization`,
+      "name": "KerjainAja",
+      "url": site,
+      "description": "Panduan lengkap cari kerja online di Indonesia. Tips CV, interview, dan daftar platform lowongan kerja terpercaya.",
+      "foundingDate": "2026",
+      "foundingLocation": "Indonesia",
+      "knowsLanguage": "id",
+      "areaServed": "Indonesia"
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site}/#website`,
+      "url": site,
+      "name": "KerjainAja",
+      "description": "Panduan lengkap cari kerja online di Indonesia",
+      "inLanguage": "id-ID",
+      "publisher": { "@id": `${site}/#organization` }
+    }
+  ]
+})} />
+
+<!-- Page-specific structured data -->
+{
+  schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )
+}
