@@ -1,0 +1,44 @@
+/* ── Tables ── */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-2xl) 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.post-content th {
+  background: var(--color-canvas-soft);
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 13px;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--color-ink);
+}
+.post-content td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(32, 21, 21, 0.08);
+  vertical-align: top;
+}
+.post-content tbody tr:hover td {
+  background: rgba(255, 79, 0, 0.04);
+}
+
+/* Table wrap for mobile scroll */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--space-2xl) 0;
+  border: 1px solid rgba(32, 21, 21, 0.08);
+  border-radius: var(--radius-md);
+}
+.table-wrap table {
+  margin: 0;
+  min-width: 540px;
+  border: none;
+}
+
+@media (max-width: 640px) {
+  .post-content th,
+  .post-content td { padding: 8px 10px; font-size: 13px; }
+}
