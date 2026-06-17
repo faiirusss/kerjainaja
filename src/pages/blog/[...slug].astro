@@ -20,21 +20,15 @@ const postSchema = {
       "@type": "Article",
       "headline": post.data.title,
       "description": post.data.description,
-      "author": {
-        "@type": "Person",
-        "name": post.data.author
-      },
+      "author": { "@type": "Person", "name": post.data.author },
       "datePublished": post.data.pubDate.toISOString(),
       "dateModified": (post.data.updatedDate || post.data.pubDate).toISOString(),
-      "publisher": {
-        "@type": "Organization",
-        "name": "KerjainAja"
-      },
+      "publisher": { "@type": "Organization", "name": "KerjainAja" },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": `https://kerjainaja.vercel.app/blog/${post.id}`
       },
-      "image": post.data.image || "https://kerjainaja.vercel.app/og-image.png"
+      "image": post.data.image || "https://kerjainaja.vercel.app/og-image.svg"
     },
     {
       "@type": "BreadcrumbList",
@@ -76,97 +70,135 @@ const postSchema = {
   canonical={`https://kerjainaja.vercel.app/blog/${post.id}`}
   schema={postSchema}
 >
-  <article class="post">
-    <header class="post-header">
-      <a href="/blog" class="back-link">← Kembali ke Blog</a>
-      <h1>{post.data.title}</h1>
-      <div class="post-meta">
-        <span>{post.data.author}</span>
-        <time datetime={post.data.pubDate.toISOString()}>
-          {new Intl.DateTimeFormat('id-ID', { dateStyle: 'long' }).format(post.data.pubDate)}
-        </time>
-      </div>
-      {post.data.tags.length > 0 && (
-        <div class="post-tags">
-          {post.data.tags.map(tag => (
-            <span class="tag">{tag}</span>
-          ))}
+  <article class="band-light">
+    <div class="container post-container">
+      <header class="post-header">
+        <a href="/blog" class="back-link">← Kembali ke Blog</a>
+        <h1>{post.data.title}</h1>
+        <div class="post-meta">
+          <span>{post.data.author}</span>
+          <span>·</span>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {new Intl.DateTimeFormat('id-ID', { dateStyle: 'long' }).format(post.data.pubDate)}
+          </time>
         </div>
-      )}
-    </header>
-    <div class="post-content">
-      <Content />
+        {post.data.tags.length > 0 && (
+          <div class="post-tags">
+            {post.data.tags.map(tag => (<span class="tag">{tag}</span>))}
+          </div>
+        )}
+      </header>
+      <div class="post-content">
+        <Content />
+      </div>
     </div>
   </article>
 </Layout>
 
 <style>
+  .post-container { max-width: 780px; margin: 0 auto; }
   .back-link {
     display: inline-block;
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-body-mid);
+    margin-bottom: var(--space-xl);
+    text-decoration: none;
   }
   .back-link:hover {
-    color: #2563eb;
+    color: var(--color-primary);
+    text-decoration: none;
   }
   .post-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid rgba(32, 21, 21, 0.08);
   }
-  .post-header h1 {
-    margin-bottom: 1rem;
-  }
+  .post-header h1 { font-size: 48px; line-height: 48px; margin-bottom: var(--space-xl); }
   .post-meta {
-    font-size: 0.9rem;
-    color: #9ca3af;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-body-mid);
     display: flex;
-    gap: 1rem;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
   }
-  .post-tags {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-  }
-  .tag {
-    background: #f3f4f6;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.8rem;
-    color: #6b7280;
-  }
+  .post-tags { display: flex; gap: var(--space-xs); flex-wrap: wrap; }
+
   .post-content {
-    max-width: 750px;
-    font-size: 1.05rem;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--color-body);
   }
   .post-content h2 {
-    margin-top: 2rem;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin: var(--space-4xl) 0 var(--space-xl);
+    color: var(--color-ink);
   }
   .post-content h3 {
-    margin-top: 1.5rem;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+    margin: var(--space-3xl) 0 var(--space-lg);
+    color: var(--color-ink);
   }
+  .post-content h2:first-child { margin-top: 0; }
+  .post-content p { margin-bottom: var(--space-lg); }
   .post-content ul, .post-content ol {
-    margin: 1rem 0;
+    margin: var(--space-lg) 0;
+    padding-left: var(--space-xl);
   }
-  .post-content li {
-    margin-bottom: 0.5rem;
-  }
+  .post-content li { margin-bottom: var(--space-sm); }
   .post-content img {
-    margin: 1.5rem 0;
-    border-radius: 8px;
+    margin: var(--space-2xl) 0;
+    border-radius: var(--radius-md);
   }
   .post-content blockquote {
-    border-left: 4px solid #2563eb;
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-    color: #6b7280;
+    border-left: 3px solid var(--color-primary);
+    padding-left: var(--space-xl);
+    margin: var(--space-2xl) 0;
+    color: var(--color-ink-mid);
     font-style: italic;
   }
   .post-content code {
-    background: #f3f4f6;
-    padding: 0.2rem 0.4rem;
+    background: var(--color-canvas-soft);
+    padding: 2px 6px;
     border-radius: 4px;
     font-size: 0.9em;
+  }
+  .post-content strong { color: var(--color-ink); }
+  .post-content a { color: var(--color-primary); text-decoration: underline; }
+  .post-content a:hover { color: var(--color-primary-hover); }
+
+  .post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-2xl) 0;
+    font-size: 16px;
+  }
+  .post-content th {
+    background: var(--color-canvas-soft);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+  }
+  .post-content td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid rgba(32, 21, 21, 0.06);
+  }
+
+  @media (max-width: 768px) {
+    .post-container { max-width: 100%; }
+    .post-header h1 { font-size: 32px; line-height: 36px; }
+    .post-content h2 { font-size: 24px; line-height: 28px; }
   }
 </style>

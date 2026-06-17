@@ -1,5 +1,4 @@
 ---
-// Header — navigasi utama
 const path = Astro.url.pathname;
 const nav = [
   { href: '/', label: 'Beranda' },
@@ -9,54 +8,79 @@ const nav = [
 ];
 ---
 
-<header class="header">
-  <div class="container header-inner">
-    <a href="/" class="logo">Kerjain<span>Aja</span></a>
-    <nav class="nav" aria-label="Navigasi utama">
+<header class="nav-bar">
+  <div class="container nav-inner">
+    <a href="/" class="logo">
+      Kerjain<span class="logo-accent">Aja</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
       {nav.map(item => (
-        <a href={item.href} class={`nav-link${path === item.href ? ' active' : ''}`}>
+        <a
+          href={item.href}
+          class={`nav-link${path === item.href ? ' active' : ''}`}
+        >
           {item.label}
         </a>
       ))}
+      <a href="/blog" class="btn btn-primary nav-cta">Jelajahi Panduan</a>
     </nav>
   </div>
 </header>
 
 <style>
-  .header {
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
+  .nav-bar {
+    background: var(--color-canvas);
+    border-bottom: 1px solid rgba(32, 21, 21, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
   }
-  .header-inner {
+  .nav-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 64px;
   }
   .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 600;
     text-decoration: none;
-    color: #111827;
+    color: var(--color-ink);
+    letter-spacing: -0.5px;
   }
-  .logo span {
-    color: #2563eb;
-  }
-  .nav {
+  .logo:hover { color: var(--color-ink); text-decoration: none; }
+  .logo-accent { color: var(--color-primary); }
+  .nav-links {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: var(--space-xl);
   }
   .nav-link {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-body);
     text-decoration: none;
-    color: #6b7280;
-    font-weight: 500;
-    font-size: 0.95rem;
     transition: color 0.2s;
   }
-  .nav-link:hover, .nav-link.active {
-    color: #2563eb;
+  .nav-link:hover {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  .nav-link.active {
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+  .nav-cta {
+    font-size: 14.4px;
+    font-weight: 700;
+    line-height: 14.4px;
+    padding: var(--space-sm) var(--space-lg);
+    letter-spacing: 0.144px;
+  }
+  @media (max-width: 768px) {
+    .nav-links .nav-link:not(.nav-cta) { display: none; }
   }
 </style>

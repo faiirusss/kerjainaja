@@ -11,15 +11,15 @@ const landingSchema = {
       "@id": `${site}/#webpage`,
       "url": site,
       "name": "KerjainAja — Panduan Lengkap Cari Kerja Online di Indonesia",
-      "description": "Panduan lengkap cari kerja online di Indonesia. Dapatkan tips CV, trik interview, dan rekomendasi platform lowongan kerja terpercaya.",
-      "about": {
-        "@type": "Thing",
-        "name": "Cari Kerja Online Indonesia"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": `${site}/og-image.png`
-      }
+      "description": "Panduan lengkap cari kerja online di Indonesia. Tips CV ATS-friendly, trik interview, dan rekomendasi platform lowongan kerja terpercaya.",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${site}/#organization`,
+      "name": "KerjainAja",
+      "url": site,
+      "description": "Panduan lengkap cari kerja online di Indonesia.",
+      "areaServed": "Indonesia"
     },
     {
       "@type": "FAQPage",
@@ -37,7 +37,7 @@ const landingSchema = {
           "name": "Platform lowongan kerja apa yang terpercaya di Indonesia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Beberapa platform lowongan kerja terpercaya di Indonesia antara lain JobStreet, LinkedIn, Glints, Indeed, dan Karirhub dari Kemnaker."
+            "text": "JobStreet, LinkedIn, Glints, dan Indeed adalah platform yang sudah terbukti terpercaya. Untuk lowongan pemerintah/BUMN, cek Karirhub Kemnaker."
           }
         },
         {
@@ -45,7 +45,7 @@ const landingSchema = {
           "name": "Bagaimana cara membuat CV yang menarik?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Gunakan format yang rapi, sesuaikan dengan posisi yang dilamar, tonjolkan pencapaian bukan hanya tugas, dan pastikan tidak ada typo. Simpan dalam format PDF."
+            "text": "Gunakan format ATS-friendly, fokus ke pencapaian bukan hanya tugas, sesuaikan keyword dengan posisi, dan simpan dalam format PDF."
           }
         },
         {
@@ -53,7 +53,7 @@ const landingSchema = {
           "name": "Apakah melamar kerja online aman?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ya, selama menggunakan platform resmi. Hindari lowongan yang meminta biaya pendaftaran, alamat tidak jelas, atau informasi rekening pribadi."
+            "text": "Aman selama pakai platform resmi. Waspada jika diminta bayar, transfer, atau data rekening. Jangan pernah kirim uang untuk biaya administrasi lowongan."
           }
         }
       ]
@@ -64,292 +64,279 @@ const landingSchema = {
 
 <Layout
   title="Panduan Lengkap Cari Kerja Online di Indonesia"
-  description="Panduan lengkap cari kerja online di Indonesia. Dapatkan tips CV ATS-friendly, trik lolos interview, dan rekomendasi 10+ platform lowongan kerja terpercaya 2026. Mulai karirmu sekarang!"
+  description="Panduan lengkap cari kerja online di Indonesia. Dapatkan tips CV ATS-friendly, trik lolos interview, dan rekomendasi platform lowongan kerja terpercaya 2026."
   ogType="website"
   canonical={site}
   schema={landingSchema}
 >
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-badge">Panduan Karir #1 di Indonesia</span>
-      <h1>Panduan Lengkap <span class="highlight">Cari Kerja Online</span> di Indonesia</h1>
-      <p class="hero-sub">
-        Panduan lengkap cari kerja online — dari bikin CV, persiapan interview, 
-        sampai daftar platform lowongan kerja terpercaya di Indonesia.
-      </p>
-      <div class="hero-actions">
-        <a href="/blog" class="btn btn-primary">Lihat Panduan Lengkap</a>
-        <a href="/tentang" class="btn btn-outline">Tentang Kami</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <strong>3+</strong>
-          <span>Artikel Panduan</span>
+  <!-- Hero Band -->
+  <section class="band-hero">
+    <div class="container hero-split">
+      <div class="hero-text">
+        <span class="eyebrow">Panduan Karir</span>
+        <h1>Panduan Lengkap<br /><span class="highlight">Cari Kerja Online</span><br />di Indonesia</h1>
+        <p class="hero-lead">Dari bikin CV ATS-friendly, persiapan interview, sampai daftar platform lowongan kerja terpercaya — semua gratis.</p>
+        <div class="hero-actions">
+          <a href="/blog" class="btn btn-primary">Jelajahi Panduan →</a>
+          <a href="/tentang" class="btn btn-tertiary">Tentang Kami</a>
         </div>
-        <div class="stat">
-          <strong>10+</strong>
-          <span>Platform Review</span>
-        </div>
-        <div class="stat">
-          <strong>100%</strong>
-          <span>Gratis</span>
+        <div class="hero-stats">
+          <div class="stat"><strong>6</strong> Artikel Panduan</div>
+          <div class="stat"><strong>10+</strong> Platform Review</div>
+          <div class="stat"><strong>100%</strong> Gratis</div>
         </div>
       </div>
+      <div class="hero-visual">
+        <svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="80" y="120" width="320" height="240" rx="12" fill="#f8f4f0" stroke="#201515" stroke-width="1.5"/>
+          <rect x="140" y="150" width="200" height="12" rx="6" fill="#201515" opacity="0.3"/>
+          <rect x="140" y="175" width="160" height="8" rx="4" fill="#939084"/>
+          <rect x="140" y="195" width="180" height="8" rx="4" fill="#939084"/>
+          <rect x="140" y="215" width="140" height="8" rx="4" fill="#939084"/>
+          <circle cx="120" cy="156" r="8" fill="#ff4f00"/>
+          <rect x="140" y="255" width="100" height="36" rx="12" fill="#ff4f00"/>
+          <text x="190" y="279" font-family="Inter, sans-serif" font-size="12" fill="#fffefb" text-anchor="middle" font-weight="600">Lihat Panduan</text>
+          <path d="M200 330 L240 360 L280 330" stroke="#201515" stroke-width="2" fill="none" opacity="0.4"/>
+          <rect x="100" y="380" width="80" height="80" rx="12" fill="#201515"/>
+          <text x="140" y="428" font-family="Inter, sans-serif" font-size="28" fill="#fffefb" text-anchor="middle" font-weight="600">CV</text>
+          <rect x="200" y="380" width="80" height="80" rx="12" fill="#f8f4f0" stroke="#201515" stroke-width="1"/>
+          <text x="240" y="428" font-family="Inter, sans-serif" font-size="28" fill="#201515" text-anchor="middle" font-weight="600">🎯</text>
+          <rect x="300" y="380" width="80" height="80" rx="12" fill="#f8f4f0" stroke="#201515" stroke-width="1"/>
+          <text x="340" y="428" font-family="Inter, sans-serif" font-size="28" fill="#201515" text-anchor="middle" font-weight="600">💼</text>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <h2>Apa yang Kami Sediakan</h2>
-    <div class="features-grid">
-      <article class="feature-card">
-        <a href="/blog/panduan-membuat-cv-2026" class="feature-card-link">
-          <div class="feature-icon">📝</div>
-          <h3>Panduan CV & Lamaran</h3>
-          <p>Tips bikin CV yang dilirik HRD, contoh surat lamaran, dan strategi personal branding.</p>
-        </a>
-      </article>
-      <article class="feature-card">
-        <a href="/blog/sukses-interview-kerja-online" class="feature-card-link">
-          <div class="feature-icon">🎯</div>
-          <h3>Persiapan Interview</h3>
-          <p>Pertanyaan yang sering muncul, cara menjawab, dan simulasi interview online.</p>
-        </a>
-      </article>
-      <article class="feature-card">
-        <a href="/blog/perbandingan-platform-lowongan-kerja" class="feature-card-link">
-          <div class="feature-icon">🔍</div>
-          <h3>Review Platform</h3>
-          <p>Perbandingan JobStreet, LinkedIn, Glints, Indeed, Karirhub dan lainnya.</p>
-        </a>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">💼</div>
-        <h3>Tips Karir Remote</h3>
-        <p>Panduan kerja remote, freelancing, dan platform internasional untuk pekerja Indonesia.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">🛡️</div>
-        <h3>Hindari Penipuan</h3>
-        <p>Ciri-ciri lowongan palsu, cara verifikasi perusahaan, dan tips aman melamar online.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Tren Karir 2026</h3>
-        <p>Industri dengan pertumbuhan tinggi, skill yang dicari, dan prospek kerja di Indonesia.</p>
-      </article>
+  <!-- Features Band (Cream) -->
+  <section class="band-cream">
+    <div class="container">
+      <span class="eyebrow">Layanan</span>
+      <h2>Apa yang Kami Sediakan</h2>
+      <div class="features-grid">
+        <article class="card feature-card">
+          <a href="/blog/panduan-membuat-cv-2026" class="feature-link">
+            <span class="feature-icon">📝</span>
+            <h4>Panduan CV & Lamaran</h4>
+            <p>Tips bikin CV ATS-friendly yang dilirik HRD, contoh surat lamaran, dan strategi personal branding.</p>
+            <span class="btn btn-text">Baca Panduan</span>
+          </a>
+        </article>
+        <article class="card feature-card">
+          <a href="/blog/sukses-interview-kerja-online" class="feature-link">
+            <span class="feature-icon">🎯</span>
+            <h4>Persiapan Interview</h4>
+            <p>Pertanyaan yang sering muncul, cara menjawab dengan teknik STAR, dan simulasi interview online.</p>
+            <span class="btn btn-text">Baca Panduan</span>
+          </a>
+        </article>
+        <article class="card feature-card">
+          <a href="/blog/perbandingan-platform-lowongan-kerja" class="feature-link">
+            <span class="feature-icon">🔍</span>
+            <h4>Review Platform</h4>
+            <p>Perbandingan JobStreet, LinkedIn, Glints, Indeed, Karirhub — lengkap dengan kelebihan dan kekurangan.</p>
+            <span class="btn btn-text">Bandingkan</span>
+          </a>
+        </article>
+        <article class="card feature-card">
+          <a href="/blog/kerja-remote-fresh-graduate" class="feature-link">
+            <span class="feature-icon">💼</span>
+            <h4>Tips Karir Remote</h4>
+            <p>Panduan kerja remote untuk fresh graduate — platform, skill yang dibutuhkan, dan cara memulai dari nol.</p>
+            <span class="btn btn-text">Cari Tahu</span>
+          </a>
+        </article>
+        <article class="card feature-card">
+          <a href="/blog/aplikasi-cari-kerja-gratis-2026" class="feature-link">
+            <span class="feature-icon">📱</span>
+            <h4>Aplikasi Cari Kerja</h4>
+            <p>10 aplikasi cari kerja gratis terbaik 2026 — lengkap dengan fitur, kelebihan, dan tips optimalisasi profil.</p>
+            <span class="btn btn-text">Lihat Aplikasi</span>
+          </a>
+        </article>
+        <article class="card feature-card">
+          <a href="/blog/cara-daftar-lowongan-bumn-2026" class="feature-link">
+            <span class="feature-icon">🏛️</span>
+            <h4>Lowongan BUMN 2026</h4>
+            <p>Panduan daftar BUMN lengkap dari pendaftaran, tes TKD, tes Akhlak, sampai tips lolos wawancara.</p>
+            <span class="btn btn-text">Pelajari</span>
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="faq">
-    <h2>Pertanyaan yang Sering Diajukan</h2>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Platform lowongan kerja apa yang paling terpercaya?</summary>
-        <p>JobStreet, LinkedIn, Glints, dan Indeed adalah platform yang sudah terbukti terpercaya. Untuk lowongan pemerintah/BUMN, cek Karirhub Kemnaker dan portal SSCASN.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Bagaimana cara bikin CV yang dilirik HRD?</summary>
-        <p>Gunakan format ATS-friendly, fokus ke pencapaian (bukan tugas), sesuaikan keyword dengan posisi, dan pastikan <em>contact information</em> jelas. Simpan dalam format PDF.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Apakah melamar kerja online aman?</summary>
-        <p>Aman selama pakai platform resmi. Waspada jika diminta bayar, transfer, atau data rekening. Jangan pernah kirim uang untuk "biaya administrasi" lowongan kerja.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Fresh graduate, mulai dari mana?</summary>
-        <p>Mulai dengan riset industri yang cocok, perbarui LinkedIn, bikin CV yang menonjolkan magang/organisasi, dan apply minimal 5-10 lamaran per minggu secara konsisten.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="cta-content">
-      <h2>Siap Mulai Karir Impian?</h2>
-      <p>Jangan biarkan kebingunan menghambat langkahmu. Dapatkan panduan lengkap, tips terbaru, dan rekomendasi platform lowongan kerja langsung di sini.</p>
+  <!-- CTA Dark Band -->
+  <section class="band-hero-dark">
+    <div class="container cta-content">
+      <span class="eyebrow" style="color: var(--color-body-mid);">Mulai Sekarang</span>
+      <h2 style="color: var(--color-on-primary);">Siap Mulai Karir Impian?</h2>
+      <p class="cta-lead">Jangan biarkan kebingungan menghambat langkahmu. Dapatkan panduan lengkap, tips terbaru, dan rekomendasi platform lowongan kerja — semuanya gratis.</p>
       <a href="/blog" class="btn btn-primary">Jelajahi Semua Panduan →</a>
+    </div>
+  </section>
+
+  <!-- FAQ Band -->
+  <section class="band-light">
+    <div class="container faq-section">
+      <span class="eyebrow">FAQ</span>
+      <h2>Pertanyaan yang Sering Diajukan</h2>
+      <div class="faq-list">
+        <details class="faq-item card" open>
+          <summary>Platform lowongan kerja apa yang paling terpercaya?</summary>
+          <p>JobStreet, LinkedIn, Glints, dan Indeed adalah platform yang sudah terbukti terpercaya. Untuk lowongan pemerintah/BUMN, cek Karirhub Kemnaker dan portal SSCASN.</p>
+        </details>
+        <details class="faq-item card">
+          <summary>Bagaimana cara bikin CV yang dilirik HRD?</summary>
+          <p>Gunakan format ATS-friendly, fokus ke pencapaian (bukan tugas), sesuaikan keyword dengan posisi, dan pastikan kontak jelas. Simpan dalam format PDF.</p>
+        </details>
+        <details class="faq-item card">
+          <summary>Apakah melamar kerja online aman?</summary>
+          <p>Aman selama pakai platform resmi. Waspada jika diminta bayar, transfer, atau data rekening. Jangan pernah kirim uang untuk biaya administrasi lowongan.</p>
+        </details>
+        <details class="faq-item card">
+          <summary>Fresh graduate, mulai dari mana?</summary>
+          <p>Mulai dengan riset industri yang cocok, perbarui LinkedIn, bikin CV yang menonjolkan magang/organisasi, dan apply minimal 5-10 lamaran per minggu secara konsisten.</p>
+        </details>
+      </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Hero */
-  .hero {
-    text-align: center;
-    padding: 4rem 0 3rem;
+  /* ── Hero Split ── */
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
   }
-  .hero-badge {
-    display: inline-block;
-    background: #dbeafe;
-    color: #1d4ed8;
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 0.35rem 1rem;
-    border-radius: 999px;
-    margin-bottom: 1.5rem;
-  }
-  .hero h1 {
-    max-width: 700px;
-    margin: 0 auto 1rem;
-    font-size: 3rem;
-  }
-  .highlight {
-    color: #2563eb;
-  }
-  .hero-sub {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    font-size: 1.15rem;
-    color: #6b7280;
+  .highlight { color: var(--color-primary); }
+  .hero-lead {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.2px;
+    color: var(--color-body);
+    margin: var(--space-xl) 0 var(--space-2xl);
+    max-width: 520px;
   }
   .hero-actions {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 3rem;
+    gap: var(--space-md);
+    margin-bottom: var(--space-3xl);
     flex-wrap: wrap;
-  }
-  .btn-outline {
-    border: 2px solid #d1d5db;
-    color: #374151;
-    background: transparent;
-  }
-  .btn-outline:hover {
-    border-color: #2563eb;
-    color: #2563eb;
-    background: #f0f5ff;
-    text-decoration: none;
   }
   .hero-stats {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    gap: var(--space-2xl);
   }
   .stat {
-    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-body);
   }
   .stat strong {
     display: block;
-    font-size: 1.5rem;
-    color: #2563eb;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-ink);
   }
-  .stat span {
-    font-size: 0.875rem;
-    color: #6b7280;
+  .hero-visual svg {
+    width: 100%;
+    height: auto;
+    max-width: 480px;
   }
 
-  /* Features */
-  .features {
-    padding: 4rem 0;
-  }
-  .features h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
+  /* ── Features Grid ── */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: var(--space-xl);
+    margin-top: var(--space-3xl);
   }
   .feature-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
     transition: box-shadow 0.2s;
   }
-  .feature-card-link {
+  .feature-card:hover {
+    box-shadow: var(--shadow-soft);
+  }
+  .feature-link {
     text-decoration: none;
     color: inherit;
     display: block;
   }
-  .feature-card-link:hover {
-    text-decoration: none;
-  }
-  .feature-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
+  .feature-link:hover { text-decoration: none; }
   .feature-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+    font-size: 32px;
+    display: block;
+    margin-bottom: var(--space-lg);
   }
-  .feature-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+  .feature-card h4 {
+    margin-bottom: var(--space-sm);
   }
   .feature-card p {
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-body);
+    margin-bottom: var(--space-lg);
   }
 
-  /* FAQ */
-  .faq {
-    padding: 3rem 0;
-    max-width: 700px;
+  /* ── CTA ── */
+  .cta-content {
+    text-align: center;
+    max-width: 600px;
     margin: 0 auto;
   }
-  .faq h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+  .cta-lead {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-body-mid);
+    margin: var(--space-lg) 0 var(--space-2xl);
+  }
+  .cta-content .btn-primary {
+    font-size: 18px;
+    padding: var(--space-md) var(--space-2xl);
+  }
+
+  /* ── FAQ ── */
+  .faq-section {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-2xl);
   }
   .faq-item {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    margin-bottom: 0.75rem;
-    padding: 1rem 1.25rem;
     cursor: pointer;
+    padding: var(--space-lg) var(--space-xl);
   }
   .faq-item summary {
+    font-family: var(--font-body);
+    font-size: 18px;
     font-weight: 600;
-    color: #111827;
+    line-height: 27px;
+    color: var(--color-ink);
     cursor: pointer;
     outline: none;
   }
   .faq-item p {
-    margin-top: 0.75rem;
-    color: #6b7280;
-    font-size: 0.9rem;
+    margin-top: var(--space-md);
+    color: var(--color-body);
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  /* CTA */
-  .cta {
-    text-align: center;
-    padding: 4rem 0;
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
   }
-  .cta-content {
-    background: #1e3a8a;
-    color: #fff;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-  }
-  .cta-content h2 {
-    color: #fff;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-  .cta-content p {
-    color: #bfdbfe;
-    max-width: 500px;
-    margin: 0 auto 2rem;
-  }
-  .cta-content .btn-primary {
-    background: #fff;
-    color: #1e3a8a;
-  }
-  .cta-content .btn-primary:hover {
-    background: #e0e7ff;
-  }
-
-  /* Responsive */
   @media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
+    .hero-split { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
     .features-grid { grid-template-columns: 1fr; }
-    .hero-stats { gap: 1.5rem; }
+    .hero-stats { gap: var(--space-xl); }
   }
 </style>

@@ -1,82 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const aboutSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "AboutPage",
-      "@id": "https://kerjainaja.vercel.app/tentang#aboutpage",
-      "url": "https://kerjainaja.vercel.app/tentang",
-      "name": "Tentang KerjainAja"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://kerjainaja.vercel.app/tentang#webpage",
-      "url": "https://kerjainaja.vercel.app/tentang",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://kerjainaja.vercel.app/" },
-          { "@type": "ListItem", "position": 2, "name": "Tentang", "item": "https://kerjainaja.vercel.app/tentang" }
-        ]
-      }
-    }
-  ]
-};
 ---
 
 <Layout
   title="Tentang Kami"
   description="KerjainAja adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan pencari kerja menemukan karir impian."
-  schema={aboutSchema}
 >
-  <section class="about">
-    <h1>Tentang KerjainAja</h1>
-    
-    <div class="about-content">
-      <p><strong>KerjainAja</strong> adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan siapapun yang sedang mencari pekerjaan agar bisa mendapatkan karir impian dengan cara yang tepat.</p>
+  <section class="band-light">
+    <div class="container about-container">
+      <span class="eyebrow">Tentang</span>
+      <h1>Tentang KerjainAja</h1>
 
-      <h2>Mengapa KerjainAja?</h2>
-      <p>Mencari kerja di era digital seharusnya lebih mudah, tapi kenyataannya banyak pencari kerja yang bingung:</p>
-      <ul>
-        <li>Platform lowongan mana yang terpercaya?</li>
-        <li>Bagaimana cara bikin CV yang dilirik HRD?</li>
-        <li>Persiapan interview yang tepat seperti apa?</li>
-        <li>Bagaimana cara menghindari lowongan palsu?</li>
-      </ul>
-      <p>KerjainAja hadir untuk menjawab semua pertanyaan itu dengan panduan yang praktis, terpercaya, dan selalu diperbarui.</p>
+      <div class="about-content">
+        <p class="about-lead"><strong>KerjainAja</strong> adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan siapapun yang sedang mencari pekerjaan agar bisa mendapatkan karir impian dengan cara yang tepat.</p>
 
-      <h2>Apa yang Kami Tawarkan</h2>
-      <ul>
-        <li><strong>Panduan CV & Lamaran</strong> — template dan tips dari profesional HR</li>
-        <li><strong>Review Platform Lowongan</strong> — perbandingan JobStreet, LinkedIn, Glints, Indeed, dan lainnya</li>
-        <li><strong>Persiapan Interview</strong> — soal yang sering muncul dan cara menjawabnya</li>
-        <li><strong>Tips Karir Remote</strong> — panduan kerja dari rumah untuk pasar global</li>
-        <li><strong>Info Tren Karir</strong> — industri dan skill yang paling dicari di Indonesia</li>
-      </ul>
+        <h2>Mengapa KerjainAja?</h2>
+        <p>Mencari kerja di era digital seharusnya lebih mudah, tapi kenyataannya banyak pencari kerja yang bingung:</p>
+        <ul>
+          <li>Platform lowongan mana yang terpercaya?</li>
+          <li>Bagaimana cara bikin CV yang dilirik HRD?</li>
+          <li>Persiapan interview yang tepat seperti apa?</li>
+          <li>Bagaimana cara menghindari lowongan palsu?</li>
+        </ul>
+        <p>KerjainAja hadir untuk menjawab semua pertanyaan itu dengan panduan yang praktis, terpercaya, dan selalu diperbarui.</p>
 
-      <h2>Visi Kami</h2>
-      <p>Menjadi referensi utama pencari kerja Indonesia dalam membuat keputusan karir yang tepat — dengan informasi yang akurat, praktis, dan gratis.</p>
+        <div class="card about-vision">
+          <h4>Visi Kami</h4>
+          <p class="visi-text">Menjadi referensi utama pencari kerja Indonesia dalam membuat keputusan karir yang tepat — dengan informasi yang akurat, praktis, dan gratis.</p>
+        </div>
+
+        <h2>Apa yang Kami Tawarkan</h2>
+        <div class="offerings">
+          <div class="offering"><strong>📝 Panduan CV & Lamaran</strong> — template dan tips dari praktisi HR</div>
+          <div class="offering"><strong>🔍 Review Platform</strong> — perbandingan JobStreet, LinkedIn, Glints, Indeed, dan lainnya</div>
+          <div class="offering"><strong>🎯 Persiapan Interview</strong> — soal yang sering muncul dan cara menjawabnya</div>
+          <div class="offering"><strong>💼 Tips Karir Remote</strong> — panduan kerja dari rumah untuk pasar global</div>
+          <div class="offering"><strong>📊 Info Tren Karir</strong> — industri dan skill yang paling dicari di Indonesia</div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  .about h1 {
-    margin-bottom: 1.5rem;
+  .about-container { max-width: 780px; margin: 0 auto; }
+  .about-container h1 { margin-bottom: var(--space-2xl); }
+  .about-content { font-size: 18px; line-height: 27px; color: var(--color-body); }
+  .about-lead { font-size: 20px; line-height: 30px; color: var(--color-ink); margin-bottom: var(--space-2xl); }
+  .about-content h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin: var(--space-4xl) 0 var(--space-xl);
+    color: var(--color-ink);
   }
-  .about-content {
-    max-width: 750px;
+  .about-content p { margin-bottom: var(--space-lg); }
+  .about-content ul { margin-bottom: var(--space-xl); }
+  .about-content li { margin-bottom: var(--space-sm); }
+
+  .about-vision {
+    margin: var(--space-3xl) 0;
+    padding: var(--space-2xl);
   }
-  .about-content p {
-    font-size: 1.05rem;
-    color: #374151;
+  .about-vision h4 { margin-bottom: var(--space-md); }
+  .visi-text { font-size: 18px; line-height: 27px; color: var(--color-body); margin: 0; }
+
+  .offerings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin: var(--space-xl) 0;
   }
-  .about-content ul {
-    margin-bottom: 1.5rem;
-  }
-  .about-content li {
-    margin-bottom: 0.5rem;
+  .offering {
+    padding: var(--space-lg) var(--space-xl);
+    background: var(--color-canvas-soft);
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    line-height: 24px;
   }
 </style>
