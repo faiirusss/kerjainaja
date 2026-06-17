@@ -176,24 +176,54 @@ const postSchema = {
 
   .post-content table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: var(--space-2xl) 0;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(32, 21, 21, 0.08);
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .post-content th {
-    background: var(--color-canvas-soft);
-    color: var(--color-ink);
+    background: var(--color-ink);
+    color: var(--color-on-primary);
     font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     padding: var(--space-md) var(--space-lg);
     text-align: left;
+    white-space: nowrap;
   }
   .post-content td {
     padding: var(--space-md) var(--space-lg);
     border-bottom: 1px solid rgba(32, 21, 21, 0.06);
+    vertical-align: top;
+  }
+  .post-content tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .post-content tbody tr:nth-child(even) td {
+    background: rgba(248, 244, 240, 0.5);
+  }
+  .post-content tbody tr:hover td {
+    background: var(--color-canvas-soft);
+  }
+
+  /* Wrap tables in scroll container on mobile */
+  .post-content .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: var(--space-2xl) 0;
+  }
+  .post-content .table-wrap table {
+    margin: 0;
+    min-width: 500px;
   }
 
   @media (max-width: 768px) {
