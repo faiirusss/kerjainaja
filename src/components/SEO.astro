@@ -12,6 +12,7 @@ export interface Props {
 
 const { title, description, canonical, ogImage, ogType, schema, noIndex } = Astro.props;
 const site = 'https://kerjainaja.vercel.app';
+const ogImageDefault = `${site}/og-image.svg`;
 const pageUrl = canonical || Astro.url.pathname;
 const fullUrl = pageUrl.startsWith('http') ? pageUrl : `${site}${pageUrl}`;
 ---
@@ -32,7 +33,7 @@ const fullUrl = pageUrl.startsWith('http') ? pageUrl : `${site}${pageUrl}`;
 <meta property="og:type" content={ogType || 'website'} />
 <meta property="og:site_name" content="KerjainAja" />
 <meta property="og:locale" content="id_ID" />
-{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:image" content={ogImage || ogImageDefault} />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
