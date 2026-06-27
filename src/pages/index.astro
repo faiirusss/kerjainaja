@@ -468,7 +468,13 @@ const landingSchema = {
     .feature-card--lg { grid-column: span 1; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
     .stat-num { font-size: 34px; }
-    .hero-cards { grid-template-columns: 1fr 1fr; }
+    .hero-cards { grid-template-columns: 1fr; }
     .hero-lead { font-size: 18px; }
+    .hero-section { padding: var(--space-3xl) 0 var(--space-2xl); }
+    .section { padding: var(--space-3xl) 0; }
+    .hcard { padding: var(--space-md) var(--space-lg); flex-direction: row; align-items: center; gap: var(--space-md); }
+    .hcard strong { font-size: 14px; }
+    .hcard span:not(.hcard-icon) { font-size: 13px; }
+    .hcard-icon { font-size: 22px; }
   }
 </style>
