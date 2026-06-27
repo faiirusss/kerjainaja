@@ -1,4 +1,4 @@
----
+|---
 const path = Astro.url.pathname;
 const nav = [
   { href: '/', label: 'Beranda' },
@@ -102,6 +102,7 @@ const nav = [
   }
   .nav-cta.active::after { display: none; }
 
+  /* ── Hamburger (morphs to X) ── */
   .nav-burger {
     display: none;
     flex-direction: column;
@@ -111,51 +112,78 @@ const nav = [
     cursor: pointer;
     padding: 8px;
     border-radius: var(--radius-sm);
+    position: relative;
+    z-index: 300;
   }
   .nav-burger span {
+    display: block;
     width: 22px;
     height: 2px;
     background: var(--color-ink);
     border-radius: 2px;
-    transition: transform 0.25s, opacity 0.25s;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+    transform-origin: center;
   }
   .nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+  /* ── Mobile overlay (full-screen) ── */
   @media (max-width: 768px) {
     .nav-burger { display: flex; }
     .nav-links {
-      position: absolute;
-      top: 64px;
+      position: fixed;
+      top: 0;
       left: 0;
-      right: 0;
+      width: 100%;
+      height: 100vh;
       flex-direction: column;
-      align-items: stretch;
-      gap: var(--space-xs);
-      background: var(--color-canvas);
-      border-bottom: 1px solid var(--color-border-soft);
-      padding: var(--space-lg);
-      box-shadow: 0 12px 24px rgba(32, 21, 21, 0.08);
-      transform: translateY(-8px);
-      opacity: 0;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2xl);
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px) saturate(200%);
+      -webkit-backdrop-filter: blur(24px) saturate(200%);
+      padding: var(--space-4xl) var(--space-xl);
       pointer-events: none;
-      transition: transform 0.25s, opacity 0.25s;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                  visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .nav-links.open {
-      transform: translateY(0);
       opacity: 1;
+      visibility: visible;
       pointer-events: auto;
     }
     .nav-link {
-      padding: var(--space-md) var(--space-sm);
-      font-size: 16px;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--color-ink);
+      padding: var(--space-sm) 0;
+      opacity: 0.7;
+      transition: opacity 0.2s, color 0.2s;
+      transform: translateY(12px);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+                  opacity 0.2s, color 0.2s;
     }
+    .nav-links.open .nav-link {
+      transform: translateY(0);
+    }
+    .nav-link.active { opacity: 1; color: var(--color-primary); }
     .nav-link.active::after { display: none; }
-    .nav-link.active { color: var(--color-primary); }
+    .nav-link:hover { opacity: 1; }
     .nav-cta {
-      margin-top: var(--space-sm);
+      margin-top: var(--space-lg);
       justify-content: center;
+      min-width: 220px;
+      padding: var(--space-md) var(--space-3xl);
+      font-size: 16px;
+      transform: translateY(12px);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+    }
+    .nav-links.open .nav-cta {
+      transform: translateY(0);
     }
   }
 </style>
@@ -173,6 +201,23 @@ const nav = [
       const open = menu.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    // Close on link click
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Buka menu');
+      document.body.style.overflow = '';
+    }));
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Buka menu');
+        document.body.style.overflow = '';
+      }
     });
   }
 </script>
