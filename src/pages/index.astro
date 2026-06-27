@@ -53,94 +53,39 @@ const landingSchema = {
 >
   <!-- ── Hero ── -->
   <section class="hero-section">
-    <div class="container hero-layout">
-      <div class="hero-text fade-in-up">
-        <span class="eyebrow">Panduan Karir Terlengkap</span>
-        <h1>Panduan Lengkap <span class="text-primary">Cari Kerja Online</span> di Indonesia</h1>
-        <p class="hero-lead">Tips CV ATS-friendly, trik lolos interview, review platform lowongan terpercaya — semuanya gratis, dari fresh graduate sampai profesional.</p>
-        <div class="hero-actions">
-          <a href="/blog" class="btn btn-primary btn-lg">Jelajahi Semua Panduan →</a>
-          <a href="/tentang" class="btn btn-tertiary">Tentang Kami</a>
-        </div>
-        <div class="hero-metrics">
-          <div class="metric"><span class="metric-num">6</span> Artikel</div>
-          <div class="metric"><span class="metric-num">10+</span> Platform</div>
-          <div class="metric"><span class="metric-num">100%</span> Gratis</div>
-        </div>
+    <div class="hero-bg bg-grid fade-mask" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <span class="pill" data-reveal><span class="pill-dot">✦</span> Diperbarui 2026 — panduan baru tiap minggu</span>
+      <h1 data-reveal style="--reveal-delay:.05s">Panduan Lengkap <span class="text-gradient">Cari Kerja Online</span> di Indonesia</h1>
+      <p class="hero-lead" data-reveal style="--reveal-delay:.1s">Tips CV ATS-friendly, trik lolos interview, review platform lowongan terpercaya — semuanya gratis, dari fresh graduate sampai profesional.</p>
+      <div class="hero-actions" data-reveal style="--reveal-delay:.15s">
+        <a href="/blog" class="btn btn-primary btn-lg">Jelajahi Semua Panduan →</a>
+        <a href="/tentang" class="btn btn-tertiary btn-lg">Tentang Kami</a>
       </div>
-      <div class="hero-visual fade-in-up delay-200">
-        <div class="hero-card-stack">
-          <div class="hc hc-1">
-            <div class="hc-icon">📝</div>
-            <div class="hc-text">
-              <strong>Panduan CV 2026</strong>
-              <span>Bikin CV ATS-friendly</span>
-            </div>
-            <a href="/blog/panduan-membuat-cv-2026" class="hc-arrow">→</a>
-          </div>
-          <div class="hc hc-2">
-            <div class="hc-icon">🎯</div>
-            <div class="hc-text">
-              <strong>Tips Interview</strong>
-              <span>Lolos wawancara online</span>
-            </div>
-            <a href="/blog/sukses-interview-kerja-online" class="hc-arrow">→</a>
-          </div>
-          <div class="hc hc-3">
-            <div class="hc-icon">🔍</div>
-            <div class="hc-text">
-              <strong>Review Platform</strong>
-              <span>JobStreet vs LinkedIn</span>
-            </div>
-            <a href="/blog/perbandingan-platform-lowongan-kerja" class="hc-arrow">→</a>
-          </div>
-          <div class="hc hc-4">
-            <div class="hc-icon">🏛️</div>
-            <div class="hc-text">
-              <strong>Lowongan BUMN</strong>
-              <span>Cara daftar 2026</span>
-            </div>
-            <a href="/blog/cara-daftar-lowongan-bumn-2026" class="hc-arrow">→</a>
-          </div>
-          <div class="hc hc-5">
-            <div class="hc-icon">💼</div>
-            <div class="hc-text">
-              <strong>Kerja Remote</strong>
-              <span>Panduan fresh graduate</span>
-            </div>
-            <a href="/blog/kerja-remote-fresh-graduate" class="hc-arrow">→</a>
-          </div>
-          <div class="hc hc-6">
-            <div class="hc-icon">📱</div>
-            <div class="hc-text">
-              <strong>Aplikasi Cari Kerja</strong>
-              <span>10 platform gratis 2026</span>
-            </div>
-            <a href="/blog/aplikasi-cari-kerja-gratis-2026" class="hc-arrow">→</a>
-          </div>
-          <div class="hc hc-7">
-            <div class="hc-icon">🔗</div>
-            <div class="hc-text">
-              <strong>Tanpa Ordal</strong>
-              <span>Tips dapat kerja tanpa koneksi</span>
-            </div>
-            <a href="/blog/cara-dapat-kerja-tanpa-koneksi" class="hc-arrow">→</a>
-          </div>
-        </div>
+      <div class="hero-cards" data-reveal style="--reveal-delay:.2s">
+        <a href="/blog/panduan-membuat-cv-2026" class="glow-card hcard">
+          <span class="hcard-icon">📝</span><strong>Panduan CV 2026</strong><span>Bikin CV ATS-friendly</span>
+        </a>
+        <a href="/blog/sukses-interview-kerja-online" class="glow-card hcard">
+          <span class="hcard-icon">🎯</span><strong>Tips Interview</strong><span>Lolos wawancara online</span>
+        </a>
+        <a href="/blog/perbandingan-platform-lowongan-kerja" class="glow-card hcard">
+          <span class="hcard-icon">🔍</span><strong>Review Platform</strong><span>JobStreet vs LinkedIn</span>
+        </a>
+        <a href="/blog/aplikasi-cari-kerja-gratis-2026" class="glow-card hcard">
+          <span class="hcard-icon">📱</span><strong>Aplikasi Cari Kerja</strong><span>10 platform gratis</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ── Trust Bar ── -->
+  <!-- ── Trust Bar (marquee) ── -->
   <section class="trust-bar">
-    <div class="container">
-      <p class="trust-label">Panduan untuk pencari kerja dari berbagai platform</p>
-      <div class="trust-logos">
-        <span class="trust-logo">JobStreet</span>
-        <span class="trust-logo">LinkedIn</span>
-        <span class="trust-logo">Glints</span>
-        <span class="trust-logo">Indeed</span>
-        <span class="trust-logo">Karirhub</span>
+    <p class="trust-label">Panduan untuk pencari kerja dari berbagai platform</p>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span class="trust-logo">JobStreet</span><span class="trust-logo">LinkedIn</span><span class="trust-logo">Glints</span><span class="trust-logo">Indeed</span><span class="trust-logo">Karirhub</span><span class="trust-logo">Kalibrr</span>
+        <span class="trust-logo">JobStreet</span><span class="trust-logo">LinkedIn</span><span class="trust-logo">Glints</span><span class="trust-logo">Indeed</span><span class="trust-logo">Karirhub</span><span class="trust-logo">Kalibrr</span>
       </div>
     </div>
   </section>
@@ -148,49 +93,49 @@ const landingSchema = {
   <!-- ── Features ── -->
   <section class="section section-cream">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">Layanan</span>
-        <h2>Semua yang kamu butuhkan untuk <span class="text-primary">cari kerja</span></h2>
+        <h2>Semua yang kamu butuhkan untuk <span class="text-gradient">cari kerja</span></h2>
         <p class="section-sub">Dari langkah pertama sampai tanda tangan kontrak — panduan lengkap di satu tempat.</p>
       </div>
-      <div class="feature-grid fade-in-up">
-        <a href="/blog/panduan-membuat-cv-2026" class="feature-card">
+      <div class="bento-grid">
+        <a href="/blog/panduan-membuat-cv-2026" class="feature-card feature-card--lg glow-card" data-reveal>
           <span class="feature-icon">📝</span>
           <h3>Panduan CV & Lamaran</h3>
-          <p>Bikin CV ATS-friendly yang dilirik HRD, lengkap dengan template dan contoh surat lamaran.</p>
+          <p>Bikin CV ATS-friendly yang dilirik HRD, lengkap dengan template dan contoh surat lamaran yang siap pakai untuk berbagai posisi.</p>
           <span class="feature-cta">Baca Panduan →</span>
         </a>
-        <a href="/blog/sukses-interview-kerja-online" class="feature-card">
+        <a href="/blog/sukses-interview-kerja-online" class="feature-card glow-card" data-reveal style="--reveal-delay:.05s">
           <span class="feature-icon">🎯</span>
           <h3>Persiapan Interview</h3>
           <p>Pertanyaan yang sering muncul, teknik STAR, dan simulasi interview online dari rumah.</p>
           <span class="feature-cta">Baca Panduan →</span>
         </a>
-        <a href="/blog/perbandingan-platform-lowongan-kerja" class="feature-card">
+        <a href="/blog/perbandingan-platform-lowongan-kerja" class="feature-card glow-card" data-reveal style="--reveal-delay:.1s">
           <span class="feature-icon">🔍</span>
           <h3>Review Platform</h3>
           <p>Bandingkan JobStreet, LinkedIn, Glints, Indeed, Karirhub — plus kelebihan & kekurangannya.</p>
           <span class="feature-cta">Bandingkan →</span>
         </a>
-        <a href="/blog/kerja-remote-fresh-graduate" class="feature-card">
+        <a href="/blog/kerja-remote-fresh-graduate" class="feature-card glow-card" data-reveal style="--reveal-delay:.15s">
           <span class="feature-icon">💼</span>
           <h3>Tips Karir Remote</h3>
           <p>Panduan kerja WFH untuk fresh graduate — platform, skill, dan cara mulai dari nol.</p>
           <span class="feature-cta">Cari Tahu →</span>
         </a>
-        <a href="/blog/aplikasi-cari-kerja-gratis-2026" class="feature-card">
+        <a href="/blog/aplikasi-cari-kerja-gratis-2026" class="feature-card glow-card" data-reveal style="--reveal-delay:.2s">
           <span class="feature-icon">📱</span>
           <h3>Aplikasi Cari Kerja</h3>
           <p>10 aplikasi cari kerja gratis terbaik 2026 — fitur, kelebihan, dan cara optimasi profil.</p>
           <span class="feature-cta">Lihat Aplikasi →</span>
         </a>
-        <a href="/blog/cara-daftar-lowongan-bumn-2026" class="feature-card">
+        <a href="/blog/cara-daftar-lowongan-bumn-2026" class="feature-card glow-card" data-reveal style="--reveal-delay:.25s">
           <span class="feature-icon">🏛️</span>
           <h3>Lowongan BUMN 2026</h3>
           <p>Panduan lengkap dari pendaftaran FHCI, tes TKD & Akhlak, sampai tips lolos wawancara.</p>
           <span class="feature-cta">Pelajari →</span>
         </a>
-        <a href="/blog/cara-dapat-kerja-tanpa-koneksi" class="feature-card">
+        <a href="/blog/cara-dapat-kerja-tanpa-koneksi" class="feature-card glow-card" data-reveal style="--reveal-delay:.3s">
           <span class="feature-icon">🔗</span>
           <h3>Tanpa Ordal</h3>
           <p>Tips dapat kerja tanpa koneksi atau orang dalam — murni dari skill & kegigihan.</p>
@@ -203,21 +148,21 @@ const landingSchema = {
   <!-- ── Stats / Numbers ── -->
   <section class="section section-stats">
     <div class="container">
-      <div class="stats-grid fade-in-up">
-        <div class="stat-card">
-          <span class="stat-num">6</span>
+      <div class="stats-grid" data-reveal>
+        <div class="stat-card glow-card">
+          <span class="stat-num" data-ticker="6">6</span>
           <span class="stat-label">Artikel Panduan</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">10+</span>
+        <div class="stat-card glow-card">
+          <span class="stat-num" data-ticker="10" data-suffix="+">10+</span>
           <span class="stat-label">Platform di-review</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">5</span>
+        <div class="stat-card glow-card">
+          <span class="stat-num" data-ticker="5">5</span>
           <span class="stat-label">Topik Karir</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">100%</span>
+        <div class="stat-card glow-card">
+          <span class="stat-num" data-ticker="100" data-suffix="%">100%</span>
           <span class="stat-label">Gratis Selamanya</span>
         </div>
       </div>
@@ -226,7 +171,8 @@ const landingSchema = {
 
   <!-- ── Dark CTA ── -->
   <section class="section section-dark">
-    <div class="container cta-block fade-in-up">
+    <div class="cta-bg bg-grid fade-mask" aria-hidden="true"></div>
+    <div class="container cta-block" data-reveal>
       <span class="eyebrow" style="color: var(--color-body-mid);">Mulai Sekarang</span>
       <h2 style="color: var(--color-on-primary);">Siap mulai karir impian?</h2>
       <p class="cta-text">Jangan biarkan kebingungan menghambat langkahmu. Dapatkan panduan lengkap, tips terbaru, dan rekomendasi platform lowongan kerja — semua gratis.</p>
@@ -237,11 +183,11 @@ const landingSchema = {
   <!-- ── FAQ ── -->
   <section class="section section-light">
     <div class="container faq-block">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <span class="eyebrow">FAQ</span>
         <h2>Pertanyaan yang Sering Diajukan</h2>
       </div>
-      <div class="faq-list fade-in-up">
+      <div class="faq-list" data-reveal>
         <details class="faq-item">
           <summary>Platform lowongan kerja apa yang paling terpercaya?</summary>
           <p>JobStreet, LinkedIn, Glints, dan Indeed adalah platform yang sudah terbukti terpercaya. Untuk lowongan pemerintah/BUMN, cek Karirhub Kemnaker dan portal SSCASN.</p>
@@ -264,42 +210,34 @@ const landingSchema = {
 </Layout>
 
 <style>
-  /* ── Animations ── */
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-400 { animation-delay: 0.4s; }
-
-  @keyframes fadeInUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
   /* ── Hero ── */
   .hero-section {
+    position: relative;
     padding: var(--space-4xl) 0 var(--space-3xl);
-    background: var(--color-canvas);
+    overflow: hidden;
   }
-  .hero-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4xl);
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
-  .text-primary { color: var(--color-primary); }
+  .hero-inner { text-align: center; max-width: 820px; }
+  .hero-inner h1 { margin: var(--space-lg) 0; }
   .hero-lead {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 30px;
     color: var(--color-body);
-    margin: var(--space-xl) 0 var(--space-2xl);
-    max-width: 500px;
+    margin: 0 auto var(--space-2xl);
+    max-width: 600px;
   }
   .hero-actions {
     display: flex;
     gap: var(--space-md);
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: var(--space-3xl);
   }
   .btn-lg {
@@ -307,74 +245,32 @@ const landingSchema = {
     padding: var(--space-md) var(--space-2xl);
     line-height: 27px;
   }
-  .hero-metrics {
-    display: flex;
-    gap: var(--space-2xl);
+  .hero-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    width: 100%;
   }
-  .metric {
-    font-size: 15px;
-    line-height: 22px;
-    color: var(--color-body-mid);
-  }
-  .metric-num {
-    display: block;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--color-ink);
-    letter-spacing: -0.5px;
-  }
-
-  /* ── Hero Card Stack ── */
-  .hero-card-stack {
+  .hcard {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
-    position: relative;
-  }
-  .hc {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    background: var(--color-canvas-soft);
-    padding: var(--space-lg) var(--space-xl);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(32, 21, 21, 0.06);
-    transition: all 0.2s;
+    gap: 4px;
+    padding: var(--space-lg);
     text-decoration: none;
     color: inherit;
+    text-align: left;
   }
-  .hc:hover {
-    border-color: var(--color-primary);
-    transform: translateX(6px);
-    text-decoration: none;
-    box-shadow: 0 4px 16px rgba(255, 79, 0, 0.1);
-  }
-  .hc-icon { font-size: 24px; flex-shrink: 0; }
-  .hc-text { flex: 1; }
-  .hc-text strong {
-    display: block;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--color-ink);
-  }
-  .hc-text span {
-    font-size: 13px;
-    color: var(--color-body-mid);
-  }
-  .hc-arrow {
-    font-size: 18px;
-    color: var(--color-primary);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .hc:hover .hc-arrow { opacity: 1; }
+  .hcard:hover { text-decoration: none; }
+  .hcard-icon { font-size: 26px; }
+  .hcard strong { font-size: 15px; color: var(--color-ink); }
+  .hcard span:not(.hcard-icon) { font-size: 13px; color: var(--color-body-mid); }
 
-  /* ── Trust Bar ── */
+  /* ── Trust marquee ── */
   .trust-bar {
     padding: var(--space-2xl) 0;
     background: var(--color-canvas);
-    border-top: 1px solid rgba(32, 21, 21, 0.04);
-    border-bottom: 1px solid rgba(32, 21, 21, 0.04);
+    border-top: 1px solid var(--color-border-hair);
+    border-bottom: 1px solid var(--color-border-hair);
   }
   .trust-label {
     text-align: center;
@@ -384,33 +280,27 @@ const landingSchema = {
     text-transform: uppercase;
     margin-bottom: var(--space-lg);
   }
-  .trust-logos {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-3xl);
-    flex-wrap: wrap;
-  }
   .trust-logo {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--color-body-mid);
-    opacity: 0.6;
+    opacity: 0.55;
     letter-spacing: -0.3px;
   }
 
   /* ── Sections ── */
-  .section {
-    padding: var(--space-4xl) 0;
-  }
+  .section { padding: var(--space-4xl) 0; }
   .section-cream { background: var(--color-canvas-soft); }
   .section-light { background: var(--color-canvas); }
   .section-dark {
+    position: relative;
+    overflow: hidden;
     background: var(--color-ink);
     color: var(--color-on-primary);
   }
   .section-head {
     text-align: center;
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto var(--space-3xl);
   }
   .section-head h2 { margin-bottom: var(--space-md); }
@@ -420,30 +310,32 @@ const landingSchema = {
     color: var(--color-body);
   }
 
-  /* ── Feature Grid ── */
-  .feature-grid {
+  /* ── Bento grid ── */
+  .bento-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    grid-auto-rows: 1fr;
   }
   .feature-card {
-    background: var(--color-canvas);
     padding: var(--space-2xl);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(32, 21, 21, 0.06);
     text-decoration: none;
     color: inherit;
-    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
   }
-  .feature-card:hover {
-    border-color: rgba(255, 79, 0, 0.3);
-    box-shadow: 0 8px 24px rgba(255, 79, 0, 0.08);
-    transform: translateY(-3px);
-    text-decoration: none;
+  .feature-card:hover { text-decoration: none; }
+  .feature-card--lg {
+    grid-column: span 2;
+    background: var(--color-ink);
+    color: var(--color-on-primary);
+    border-color: transparent;
   }
+  .feature-card--lg h3 { color: var(--color-on-primary); }
+  .feature-card--lg p { color: var(--color-body-mid); }
   .feature-icon { font-size: 32px; display: block; margin-bottom: var(--space-lg); }
   .feature-card h3 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
     line-height: 24px;
     margin-bottom: var(--space-sm);
@@ -454,6 +346,7 @@ const landingSchema = {
     line-height: 22px;
     color: var(--color-body);
     margin-bottom: var(--space-lg);
+    flex: 1;
   }
   .feature-cta {
     font-size: 14px;
@@ -471,15 +364,16 @@ const landingSchema = {
   .stat-card {
     text-align: center;
     padding: var(--space-xl);
+    border-radius: var(--radius-lg);
   }
   .stat-num {
     display: block;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 700;
     color: var(--color-primary);
     line-height: 1;
     margin-bottom: var(--space-sm);
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
   }
   .stat-label {
     font-size: 15px;
@@ -487,9 +381,25 @@ const landingSchema = {
   }
 
   /* ── CTA ── */
+  .cta-bg { position: absolute; inset: 0; z-index: 0; opacity: 0.5; }
+  .section-dark .container { position: relative; z-index: 1; }
+  .section-dark::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 480px;
+    height: 240px;
+    transform: translate(-50%, -50%);
+    background: var(--color-primary);
+    filter: blur(160px);
+    opacity: 0.18;
+    z-index: 0;
+    pointer-events: none;
+  }
   .cta-block {
     text-align: center;
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto;
   }
   .cta-block h2 { margin-bottom: var(--space-md); }
@@ -501,28 +411,45 @@ const landingSchema = {
   }
 
   /* ── FAQ ── */
-  .faq-block { max-width: 720px; margin: 0 auto; }
+  .faq-block { max-width: 760px; margin: 0 auto; }
   .faq-list {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
   }
   .faq-item {
-    background: var(--color-canvas-soft);
+    background: var(--color-canvas);
     padding: var(--space-lg) var(--space-xl);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(32, 21, 21, 0.06);
-    cursor: pointer;
-    transition: border-color 0.2s;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-soft);
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .faq-item:hover { border-color: rgba(255, 79, 0, 0.2); }
+  .faq-item:hover {
+    border-color: rgba(255, 79, 0, 0.25);
+    box-shadow: var(--shadow-card);
+  }
   .faq-item summary {
     font-size: 16px;
     font-weight: 600;
     color: var(--color-ink);
     cursor: pointer;
     outline: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
   }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-primary);
+    transition: transform 0.25s;
+    line-height: 1;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
   .faq-item p {
     margin-top: var(--space-md);
     color: var(--color-body);
@@ -532,15 +459,16 @@ const landingSchema = {
 
   /* ── Responsive ── */
   @media (max-width: 1024px) {
-    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+    .feature-card--lg { grid-column: span 2; }
+    .hero-cards { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .hero-layout { grid-template-columns: 1fr; }
-    .hero-visual { display: none; }
-    .feature-grid { grid-template-columns: 1fr; }
+    .bento-grid { grid-template-columns: 1fr; }
+    .feature-card--lg { grid-column: span 1; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
-    .stat-num { font-size: 32px; }
-    .hero-metrics { gap: var(--space-xl); }
-    .trust-logos { gap: var(--space-xl); }
+    .stat-num { font-size: 34px; }
+    .hero-cards { grid-template-columns: 1fr 1fr; }
+    .hero-lead { font-size: 18px; }
   }
 </style>

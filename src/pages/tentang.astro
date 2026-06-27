@@ -6,13 +6,14 @@ import Layout from '../layouts/Layout.astro';
   title="Tentang Kami"
   description="KerjainAja adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan pencari kerja menemukan karir impian."
 >
-  <section class="band-light">
+  <section class="band-light about-hero">
+    <div class="hero-bg bg-grid fade-mask" aria-hidden="true"></div>
     <div class="container about-container">
-      <span class="eyebrow">Tentang</span>
-      <h1>Tentang KerjainAja</h1>
+      <span class="eyebrow" data-reveal>Tentang</span>
+      <h1 data-reveal style="--reveal-delay:.05s">Tentang KerjainAja</h1>
 
       <div class="about-content">
-        <p class="about-lead"><strong>KerjainAja</strong> adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan siapapun yang sedang mencari pekerjaan agar bisa mendapatkan karir impian dengan cara yang tepat.</p>
+        <p class="about-lead" data-reveal style="--reveal-delay:.1s"><strong>KerjainAja</strong> adalah platform panduan lengkap cari kerja online di Indonesia. Kami hadir untuk membantu fresh graduate, profesional, dan siapapun yang sedang mencari pekerjaan agar bisa mendapatkan karir impian dengan cara yang tepat.</p>
 
         <h2>Mengapa KerjainAja?</h2>
         <p>Mencari kerja di era digital seharusnya lebih mudah, tapi kenyataannya banyak pencari kerja yang bingung:</p>
@@ -24,18 +25,18 @@ import Layout from '../layouts/Layout.astro';
         </ul>
         <p>KerjainAja hadir untuk menjawab semua pertanyaan itu dengan panduan yang praktis, terpercaya, dan selalu diperbarui.</p>
 
-        <div class="card about-vision">
+        <div class="about-vision" data-reveal>
           <h4>Visi Kami</h4>
           <p class="visi-text">Menjadi referensi utama pencari kerja Indonesia dalam membuat keputusan karir yang tepat — dengan informasi yang akurat, praktis, dan gratis.</p>
         </div>
 
         <h2>Apa yang Kami Tawarkan</h2>
         <div class="offerings">
-          <div class="offering"><strong>📝 Panduan CV & Lamaran</strong> — template dan tips dari praktisi HR</div>
-          <div class="offering"><strong>🔍 Review Platform</strong> — perbandingan JobStreet, LinkedIn, Glints, Indeed, dan lainnya</div>
-          <div class="offering"><strong>🎯 Persiapan Interview</strong> — soal yang sering muncul dan cara menjawabnya</div>
-          <div class="offering"><strong>💼 Tips Karir Remote</strong> — panduan kerja dari rumah untuk pasar global</div>
-          <div class="offering"><strong>📊 Info Tren Karir</strong> — industri dan skill yang paling dicari di Indonesia</div>
+          <div class="offering glow-card" data-reveal><strong>📝 Panduan CV & Lamaran</strong><span>Template dan tips dari praktisi HR</span></div>
+          <div class="offering glow-card" data-reveal style="--reveal-delay:.05s"><strong>🔍 Review Platform</strong><span>Perbandingan JobStreet, LinkedIn, Glints, Indeed, dan lainnya</span></div>
+          <div class="offering glow-card" data-reveal style="--reveal-delay:.1s"><strong>🎯 Persiapan Interview</strong><span>Soal yang sering muncul dan cara menjawabnya</span></div>
+          <div class="offering glow-card" data-reveal style="--reveal-delay:.15s"><strong>💼 Tips Karir Remote</strong><span>Panduan kerja dari rumah untuk pasar global</span></div>
+          <div class="offering glow-card" data-reveal style="--reveal-delay:.2s"><strong>📊 Info Tren Karir</strong><span>Industri dan skill yang paling dicari di Indonesia</span></div>
         </div>
       </div>
     </div>
@@ -43,7 +44,9 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .about-container { max-width: 780px; margin: 0 auto; }
+  .about-hero { position: relative; overflow: hidden; }
+  .about-hero .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .about-container { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
   .about-container h1 { margin-bottom: var(--space-2xl); }
   .about-content { font-size: 18px; line-height: 27px; color: var(--color-body); }
   .about-lead { font-size: 20px; line-height: 30px; color: var(--color-ink); margin-bottom: var(--space-2xl); }
@@ -62,21 +65,33 @@ import Layout from '../layouts/Layout.astro';
   .about-vision {
     margin: var(--space-3xl) 0;
     padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    background: var(--color-ink);
+    color: var(--color-on-primary);
   }
-  .about-vision h4 { margin-bottom: var(--space-md); }
-  .visi-text { font-size: 18px; line-height: 27px; color: var(--color-body); margin: 0; }
+  .about-vision h4 { color: var(--color-on-primary); margin-bottom: var(--space-md); }
+  .visi-text { font-size: 18px; line-height: 27px; color: var(--color-body-mid); margin: 0; }
 
   .offerings {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
     margin: var(--space-xl) 0;
   }
   .offering {
-    padding: var(--space-lg) var(--space-xl);
-    background: var(--color-canvas-soft);
-    border-radius: var(--radius-md);
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-xl);
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    font-size: 15px;
     line-height: 24px;
+  }
+  .offering strong { font-size: 16px; color: var(--color-ink); }
+  .offering span { color: var(--color-body); }
+  @media (max-width: 768px) {
+    .offerings { grid-template-columns: 1fr; }
   }
 </style>

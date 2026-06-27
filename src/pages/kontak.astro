@@ -6,32 +6,33 @@ import Layout from '../layouts/Layout.astro';
   title="Kontak"
   description="Hubungi tim KerjainAja untuk pertanyaan, saran, atau kerjasama. Kami senang mendengar dari Anda."
 >
-  <section class="band-light">
+  <section class="band-light contact-hero">
+    <div class="hero-bg bg-grid fade-mask" aria-hidden="true"></div>
     <div class="container contact-container">
-      <span class="eyebrow">Kontak</span>
-      <h1>Hubungi Kami</h1>
-      <p class="contact-sub">Punya pertanyaan, saran, atau mau kerjasama? Kami senang mendengar dari Anda.</p>
+      <span class="eyebrow" data-reveal>Kontak</span>
+      <h1 data-reveal style="--reveal-delay:.05s">Hubungi Kami</h1>
+      <p class="contact-sub" data-reveal style="--reveal-delay:.1s">Punya pertanyaan, saran, atau mau kerjasama? Kami senang mendengar dari Anda.</p>
     </div>
   </section>
 
   <section class="band-cream">
     <div class="container contact-grid">
-      <div class="contact-info">
-        <div class="card info-card">
+      <div class="contact-info" data-reveal>
+        <div class="info-card glow-card">
           <strong>✉️ Email</strong>
           <p>hello@kerjainaja.vercel.app</p>
         </div>
-        <div class="card info-card">
+        <div class="info-card glow-card">
           <strong>💬 Respons</strong>
           <p>Kami biasanya membalas dalam 1-2 hari kerja.</p>
         </div>
-        <div class="card info-card">
+        <div class="info-card glow-card">
           <strong>📍 Lokasi</strong>
           <p>Indonesia</p>
         </div>
       </div>
 
-      <form class="contact-form card" method="POST" action="/kontak" netlify>
+      <form class="contact-form" method="POST" action="/kontak" netlify data-reveal style="--reveal-delay:.08s">
         <label>
           Nama
           <input type="text" name="name" required placeholder="Nama lengkap" class="text-input" />
@@ -51,7 +52,9 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .contact-container { max-width: 780px; margin: 0 auto; }
+  .contact-hero { position: relative; overflow: hidden; }
+  .contact-hero .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .contact-container { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
   .contact-container h1 { margin-bottom: var(--space-lg); }
   .contact-sub {
     font-size: 20px;
@@ -72,6 +75,12 @@ import Layout from '../layouts/Layout.astro';
     flex-direction: column;
     gap: var(--space-md);
   }
+  .info-card {
+    padding: var(--space-xl);
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+  }
   .info-card strong {
     display: block;
     margin-bottom: var(--space-xs);
@@ -89,6 +98,10 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
+    background: var(--color-canvas);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
   }
   .contact-form label {
     display: flex;

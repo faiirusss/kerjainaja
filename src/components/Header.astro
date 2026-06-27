@@ -8,12 +8,15 @@ const nav = [
 ];
 ---
 
-<header class="nav-bar">
+<header class="nav-bar" id="site-header">
   <div class="container nav-inner">
     <a href="/" class="logo">
       Kerjain<span class="logo-accent">Aja</span>
     </a>
-    <nav class="nav-links" aria-label="Navigasi utama">
+    <button class="nav-burger" id="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-menu" aria-label="Navigasi utama">
       {nav.map(item => (
         <a
           href={item.href}
@@ -29,11 +32,18 @@ const nav = [
 
 <style>
   .nav-bar {
-    background: var(--color-canvas);
-    border-bottom: 1px solid rgba(32, 21, 21, 0.08);
+    background: color-mix(in srgb, var(--color-canvas) 80%, transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid transparent;
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  }
+  .nav-bar.scrolled {
+    border-bottom-color: var(--color-border-soft);
+    box-shadow: 0 4px 20px rgba(32, 21, 21, 0.04);
   }
   .nav-inner {
     display: flex;
@@ -44,10 +54,10 @@ const nav = [
   .logo {
     font-family: var(--font-display);
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     color: var(--color-ink);
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
   }
   .logo:hover { color: var(--color-ink); text-decoration: none; }
   .logo-accent { color: var(--color-primary); }
@@ -58,12 +68,13 @@ const nav = [
   }
   .nav-link {
     font-family: var(--font-body);
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 24px;
     color: var(--color-body);
     text-decoration: none;
     transition: color 0.2s;
+    position: relative;
   }
   .nav-link:hover {
     color: var(--color-ink);
@@ -71,7 +82,16 @@ const nav = [
   }
   .nav-link.active {
     color: var(--color-ink);
-    font-weight: 500;
+  }
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -22px;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: 2px;
   }
   .nav-cta {
     font-size: 14.4px;
@@ -80,7 +100,79 @@ const nav = [
     padding: var(--space-sm) var(--space-lg);
     letter-spacing: 0.144px;
   }
+  .nav-cta.active::after { display: none; }
+
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+  }
+  .nav-burger span {
+    width: 22px;
+    height: 2px;
+    background: var(--color-ink);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
   @media (max-width: 768px) {
-    .nav-links .nav-link:not(.nav-cta) { display: none; }
+    .nav-burger { display: flex; }
+    .nav-links {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-xs);
+      background: var(--color-canvas);
+      border-bottom: 1px solid var(--color-border-soft);
+      padding: var(--space-lg);
+      box-shadow: 0 12px 24px rgba(32, 21, 21, 0.08);
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-links.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nav-link {
+      padding: var(--space-md) var(--space-sm);
+      font-size: 16px;
+    }
+    .nav-link.active::after { display: none; }
+    .nav-link.active { color: var(--color-primary); }
+    .nav-cta {
+      margin-top: var(--space-sm);
+      justify-content: center;
+    }
   }
 </style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+    });
+  }
+</script>

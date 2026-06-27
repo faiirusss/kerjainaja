@@ -28,6 +28,7 @@ const year = new Date().getFullYear();
       <a href="/blog/kerja-remote-fresh-graduate">Kerja Remote</a>
     </div>
   </div>
+  <div class="footer-wordmark" aria-hidden="true">KerjainAja</div>
   <div class="footer-bottom">
     <div class="container">
       <p>&copy; {year} KerjainAja. Semua panduan gratis untuk pencari kerja Indonesia.</p>
@@ -37,16 +38,43 @@ const year = new Date().getFullYear();
 
 <style>
   .footer {
+    position: relative;
+    overflow: hidden;
     background: var(--color-ink);
     color: var(--color-canvas-soft);
     padding: var(--space-3xl) 0 0;
     margin-top: var(--space-4xl);
   }
+  .footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255, 254, 251, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 254, 251, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000, transparent 75%);
+    pointer-events: none;
+  }
   .footer-inner {
+    position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: var(--space-3xl);
     padding-bottom: var(--space-3xl);
+  }
+  .footer-wordmark {
+    position: relative;
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(48px, 14vw, 180px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+    color: rgba(255, 254, 251, 0.04);
+    user-select: none;
+    margin: var(--space-2xl) 0 calc(var(--space-2xl) * -0.4);
   }
   .footer-logo {
     font-family: var(--font-display);
@@ -87,6 +115,7 @@ const year = new Date().getFullYear();
     text-decoration: none;
   }
   .footer-bottom {
+    position: relative;
     border-top: 1px solid rgba(255, 254, 251, 0.08);
     padding: var(--space-xl) 0;
     font-size: 14px;
